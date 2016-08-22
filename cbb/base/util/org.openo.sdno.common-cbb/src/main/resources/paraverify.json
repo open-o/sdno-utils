@@ -1,0 +1,10 @@
+[
+	{
+		"datatype": "String",
+		"min": "0",
+		"max": "255",
+		"errorcode": "1032004",
+		"required": "false",
+		"forbiddenchar": "\r,\n"
+	}
+]

@@ -1,0 +1,14 @@
+[
+	{
+		"containKey": "/svc/mss/v2",
+		"replace": "/org.openo.sdno.mss.service",
+		"host": "127.0.0.1",
+		"port": 8080
+	},
+	{
+		"containKey": "/brs/v1",
+		"replace": "/org.openo.sdno.brs",
+		"host": "127.0.0.1",
+		"port": 8080
+	}
+]
