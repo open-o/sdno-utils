@@ -18,6 +18,7 @@ package org.openo.sdno.framework.container.util;
 
 import java.io.File;
 
+import org.openo.baseservice.util.impl.SystemEnvVariablesFactory;
 import org.openo.baseservice.util.inf.SystemEnvVariables;
 
 /**
@@ -64,7 +65,7 @@ public class SysEnvironment {
      * @since SDNO 0.5
      */
     public static final String getGlobalEtcPath() {
-        return SystemEnvVariables.getinstance().getAppRoot() + File.separator + "rtsp" + File.separator + RTSP_CACHE
+        return SystemEnvVariablesFactory.getInstance().getAppRoot() + File.separator + "rtsp" + File.separator + RTSP_CACHE
                 + File.separator + "etc";
     }
 
@@ -75,7 +76,7 @@ public class SysEnvironment {
      * @since SDNO 0.5
      */
     public static final String getEtcPath() {
-        return SystemEnvVariables.getinstance().getAppRoot() + File.separator + "etc";
+        return SystemEnvVariablesFactory.getInstance().getAppRoot() + File.separator + "etc";
     }
 
     /**
@@ -85,7 +86,7 @@ public class SysEnvironment {
      * @since SDNO 0.5
      */
     public static final String getAppRoot() {
-        return SystemEnvVariables.getinstance().getAppRoot();
+        return SystemEnvVariablesFactory.getInstance().getAppRoot();
     }
 
     /**

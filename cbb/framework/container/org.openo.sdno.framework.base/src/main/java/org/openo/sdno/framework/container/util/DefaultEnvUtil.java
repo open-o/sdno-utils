@@ -19,6 +19,7 @@ package org.openo.sdno.framework.container.util;
 import java.io.File;
 import java.util.Locale;
 
+import org.openo.baseservice.util.impl.SystemEnvVariablesFactory;
 import org.openo.baseservice.util.inf.SystemEnvVariables;
 
 /**
@@ -29,7 +30,7 @@ import org.openo.baseservice.util.inf.SystemEnvVariables;
  */
 public class DefaultEnvUtil {
 
-    private static SystemEnvVariables systemEnv = SystemEnvVariables.getinstance();
+    private static SystemEnvVariables systemEnv = SystemEnvVariablesFactory.getInstance();
 
     private static Locale locale = null;
 

@@ -8,7 +8,7 @@
     <packaging>pom</packaging>
     <name>org.openo.sdno.root</name>
     <parent>
-        <groupId>org.openo.baseservice</groupId>
+        <groupId>org.openo.common-services.common-utilities</groupId>
         <artifactId>common-setting</artifactId>
         <version>1.0.1-SNAPSHOT</version>
     </parent>
