@@ -3,10 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>container</artifactId>
-        <groupId>org.openo.sdno</groupId>
+        <groupId>org.openo.sdno.utils</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>org.openo.sdno</groupId>
     <artifactId>org.openo.sdno.framework.base</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>

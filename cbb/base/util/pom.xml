@@ -3,13 +3,12 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.openo.sdno</groupId>
     <artifactId>cbb.base.util</artifactId>
     <packaging>pom</packaging>
     <name>cbb.base.util</name>
     <parent>
         <artifactId>base</artifactId>
-        <groupId>org.openo.sdno</groupId>
+        <groupId>org.openo.sdno.utils</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <properties>

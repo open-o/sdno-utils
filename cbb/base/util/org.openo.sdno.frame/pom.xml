@@ -4,10 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>cbb.base.util</artifactId>
-        <groupId>org.openo.sdno</groupId>
+        <groupId>org.openo.sdno.utils</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>org.openo.sdno</groupId>
     <artifactId>org.openo.sdno.frame</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>org.openo.sdno.frame</name>
@@ -47,7 +46,7 @@
             <version>1.6.1</version>
         </dependency>
         <dependency>
-            <groupId>org.openo.sdno</groupId>
+            <groupId>org.openo.sdno.utils</groupId>
             <artifactId>org.openo.sdno.framework.base</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <type>jar</type>
@@ -73,7 +72,7 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.openo.sdno</groupId>
+            <groupId>org.openo.sdno.utils</groupId>
             <artifactId>org.openo.sdno.common-cbb</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <type>jar</type>
