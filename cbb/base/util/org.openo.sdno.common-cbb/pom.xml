@@ -15,7 +15,6 @@
     <name>org.openo.sdno.common-cbb</name>
 
     <properties>
-        <release.dir>${basedir}/../release/sdno_common</release.dir>
         <resources.dir>${basedir}/src/main/resources</resources.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

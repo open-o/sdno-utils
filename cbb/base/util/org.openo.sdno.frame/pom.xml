@@ -13,9 +13,6 @@
     <packaging>jar</packaging>
     <properties>
         <bundle.type>common</bundle.type>
-        <release.dir>
-            ${basedir}/../release/sdno_common/org.openo.sdno.frame/
-        </release.dir>
     </properties>
     <dependencies>
         <dependency>
