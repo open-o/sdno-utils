@@ -1,0 +1,7 @@
+## This is my Test Shell Script
+
+echo test1
+echo test2
+echo $info
+time
+

@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <artifactId>sdno.cbb</artifactId>
-    <packaging>pom</packaging>
-    <name>sdno.cbb</name>
+
     <parent>
-        <artifactId>org.openo.sdno.root</artifactId>
         <groupId>org.openo.sdno.utils</groupId>
+        <artifactId>sdno.cbb</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>cbb.protocol</artifactId>
+    <name>cbb.protocol</name>
+    <packaging>pom</packaging>
+
     <properties>
         <ver.oms>2.0.0.RELEASE</ver.oms>
         <ver.sample>2.0-SNAPSHOT</ver.sample>
     </properties>
+
     <modules>
-        <module>base</module>
-        <module>framework</module>
-        <module>protocol</module>
+        <module>org.openo.sdno.protocol.cli</module>
     </modules>
+
 </project>
