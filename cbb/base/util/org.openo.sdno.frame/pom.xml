@@ -7,8 +7,8 @@
         <groupId>org.openo.sdno.utils</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+
     <artifactId>org.openo.sdno.frame</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>org.openo.sdno.frame</name>
     <packaging>jar</packaging>
     <properties>
