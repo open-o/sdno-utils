@@ -1,0 +1,22 @@
+[
+	{
+		"method": "GET",
+		"url": "/upload/vpnfile"
+	},
+	{
+		"method": "POST",
+		"url": "/rest/ui/inventory/upload/tenantfile"
+	},
+	{
+		"method": "GET",
+		"url": "/rest/ui/inventory/upload/tenantfile/tenants_file_template.xlsx"
+	},
+	{
+		"method": "GET",
+		"url": "/rest/ui/inventory/upload/tenantfile"
+	},
+	{
+		"method": "GET",
+		"url": "/rest/ui/sdnwan/.*"
+	}
+]

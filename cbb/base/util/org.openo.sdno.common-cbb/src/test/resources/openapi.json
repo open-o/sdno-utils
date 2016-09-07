@@ -1,0 +1,10 @@
+[
+	{
+		"method": "GET",
+		"url": "/rest/openapi/vas/v1/dhcp/server"
+	},
+	{
+		"method": "GET",
+		"url": "/rest/openapi/vcpe/v1/ne"
+	}
+]
