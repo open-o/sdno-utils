@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -20,7 +20,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * IPv4 address utility functions.<br/>
+ * IPv4 address utility functions.<br>
  * 
  * @author
  * @version SDNO 0.5 13-Apr-2016
@@ -36,7 +36,7 @@ public final class IPv4Util {
     }
 
     /**
-     * Convert IP address to bytes using regular expression <br/>
+     * Convert IP address to bytes using regular expression <br>
      * 
      * @param ipAddr - IP address as string
      * @return IP address in byte format
@@ -59,7 +59,7 @@ public final class IPv4Util {
     }
 
     /**
-     * Convert bytes to IP Address<br/>
+     * Convert bytes to IP Address<br>
      * 
      * @param bytes - IP Address as bytes
      * @return IPAddress - IP Address
@@ -71,7 +71,7 @@ public final class IPv4Util {
     }
 
     /**
-     * Convert bytes to integer <br/>
+     * Convert bytes to integer <br>
      * 
      * @param bytes - IP address in bytes
      * @return int - IP address as integer
@@ -88,7 +88,7 @@ public final class IPv4Util {
     }
 
     /**
-     * Convert IP address to integer <br/>
+     * Convert IP address to integer <br>
      * 
      * @param ipAddr - IP address as string
      * @return int -IP address as integer
@@ -104,7 +104,7 @@ public final class IPv4Util {
     }
 
     /**
-     * Convert integer to bytes<br/>
+     * Convert integer to bytes<br>
      * 
      * @param ipInt - IP address as integer
      * @return byte - format of IP address
@@ -122,7 +122,7 @@ public final class IPv4Util {
     }
 
     /**
-     * Convert integer to IP address <br/>
+     * Convert integer to IP address <br>
      * 
      * @param ipInt - IP Address as integer
      * @return String - IP address as string
@@ -134,7 +134,7 @@ public final class IPv4Util {
     }
 
     /**
-     * Based on IP address and scope determine the netip and host scope <br/>
+     * Based on IP address and scope determine the netip and host scope <br>
      * 
      * @param ipAndMask - X.X.X.X/32
      * @return array of int arrint[0] = netip, arrint[1] = host scope
@@ -161,8 +161,8 @@ public final class IPv4Util {
     }
 
     /**
-     * Based on IP address and scope determine the netip and host scope <br/>
-     * <br/>
+     * Based on IP address and scope determine the netip and host scope <br>
+     * <br>
      * 
      * @param ipAddr - X.X.X.X
      * @param mask - mask in terms of IP Address - 255.255.255.0
@@ -192,7 +192,7 @@ public final class IPv4Util {
     }
 
     /**
-     * Get scope of IP address<br/>
+     * Get scope of IP address<br>
      * 
      * @param ipAndMask - X.X.X.X/32
      * @return Array of String - arrString[0] - netIP arrString[1] - host scope
@@ -204,7 +204,7 @@ public final class IPv4Util {
     }
 
     /**
-     * Get scope of IP address<br/>
+     * Get scope of IP address<br>
      * 
      * @param ipAddr - X.X.X.X
      * @param mask - like 255.255.255.0
@@ -217,7 +217,7 @@ public final class IPv4Util {
     }
 
     /**
-     * Convert IP address to long<br/>
+     * Convert IP address to long<br>
      * 
      * @param strip - IP address
      * @return long value of IP address
@@ -238,7 +238,7 @@ public final class IPv4Util {
     }
 
     /**
-     * Convert long to IP address <br/>
+     * Convert long to IP address <br>
      * 
      * @param ipNum - long value of IP address
      * @return - String - IP address

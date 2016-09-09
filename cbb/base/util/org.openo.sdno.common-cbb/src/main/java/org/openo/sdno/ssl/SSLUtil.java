@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -39,7 +39,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Public methods to help SSL operation. <br/>
+ * Public methods to help SSL operation. <br>
  * 
  * @author
  * @version SDNO 0.5 2016-4-13
@@ -59,7 +59,7 @@ public class SSLUtil {
     }
 
     /**
-     * Use password to analyze keystore file. <br/>
+     * Use password to analyze keystore file. <br>
      * 
      * @param filePath file path to keystore file.
      * @param key needed to parsing the keystore file.
@@ -92,7 +92,7 @@ public class SSLUtil {
     }
 
     /**
-     * Initialize SSLContext with kerstore, TrustStore and protocol. <br/>
+     * Initialize SSLContext with kerstore, TrustStore and protocol. <br>
      * 
      * @param keyStoreKeyPass encrypted keystore keyword string.
      * @param keyStoreFilePath file path to keystore file.
@@ -127,7 +127,7 @@ public class SSLUtil {
     }
 
     /**
-     * Get default SSLContext object. <br/>
+     * Get default SSLContext object. <br>
      * 
      * @return default SSLContext object.
      * @since SDNO 0.5
@@ -146,7 +146,7 @@ public class SSLUtil {
 }
 
 /**
- * Default X509TrustManager.<br/>
+ * Default X509TrustManager.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-4-13

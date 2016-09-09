@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -32,7 +32,7 @@ import org.slf4j.LoggerFactory;
 
 
 /**
- * Java entity class, containing methods to operate the filed and value in the object.<br/>
+ * Java entity class, containing methods to operate the filed and value in the object.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-4-13
@@ -45,7 +45,7 @@ public class JavaEntityUtil {
     }
 
     /**
-     * Get the object attitudes, returns an array of strings.<br/>
+     * Get the object attitudes, returns an array of strings.<br>
      * 
      * @param o Object that contains field names
      * @return Collection of field names
@@ -67,7 +67,7 @@ public class JavaEntityUtil {
     }
 
     /**
-     * Reflect to get field value by field name.<br/>
+     * Reflect to get field value by field name.<br>
      * 
      * @param fieldName Field name
      * @param o Object that contains the field
@@ -106,7 +106,7 @@ public class JavaEntityUtil {
     }
 
     /**
-     * Set value of the specified field in the object, support the enumeration type.<br/>
+     * Set value of the specified field in the object, support the enumeration type.<br>
      * 
      * @param field The specified field to be modified
      * @param o The object where the field exists
@@ -144,7 +144,7 @@ public class JavaEntityUtil {
     }
 
     /**
-     * Reflect to get field value.<br/>
+     * Reflect to get field value.<br>
      * 
      * @param fieldName Field name
      * @param o Object that contains the field
@@ -156,7 +156,7 @@ public class JavaEntityUtil {
     }
 
     /**
-     * Gets all the field values of the object.<br/>
+     * Gets all the field values of the object.<br>
      * 
      * @param o Object that contains the field
      * @return Map of field names and values
@@ -176,7 +176,7 @@ public class JavaEntityUtil {
     }
 
     /**
-     * Get object list by specified field values.<br/>
+     * Get object list by specified field values.<br>
      * 
      * @param mapList Collection of specified field names and values
      * @param clazz class object
@@ -211,7 +211,7 @@ public class JavaEntityUtil {
     }
 
     /**
-     * Gets all the fields of the object, including the public, private, and parent class.<br/>
+     * Gets all the fields of the object, including the public, private, and parent class.<br>
      * 
      * @param clazz Object class
      * @return Collection of all fields
@@ -237,7 +237,7 @@ public class JavaEntityUtil {
     }
 
     /**
-     * Gets all the fields of the class.<br/>
+     * Gets all the fields of the class.<br>
      * 
      * @param clazz Class object
      * @param allfield Collection of all fields
@@ -264,7 +264,7 @@ public class JavaEntityUtil {
 
     /**
      * Gets the field type, and if the field is a container, the generic type in the container is
-     * taken.<br/>
+     * taken.<br>
      * 
      * @param field The specified field
      * @return Field type

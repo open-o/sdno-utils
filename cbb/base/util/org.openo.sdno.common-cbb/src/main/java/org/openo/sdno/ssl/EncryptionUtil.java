@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -20,7 +20,7 @@ import org.openo.baseservice.encrypt.cbb.CipherCreator;
 import org.openo.baseservice.encrypt.cbb.inf.AbstractCipher;
 
 /**
- * Encapsulation of encryption method of the platform. <br/>
+ * Encapsulation of encryption method of the platform. <br>
  * 
  * @author
  * @version SDNO 0.5 2016-4-13
@@ -32,7 +32,7 @@ public class EncryptionUtil {
     }
 
     /**
-     * encryption method. <br/>
+     * encryption method. <br>
      * 
      * @param plain char array represent the String need to encrypted.
      * @return char array of the encrypted string.
@@ -45,7 +45,7 @@ public class EncryptionUtil {
     }
 
     /**
-     * decipher method. <br/>
+     * decipher method. <br>
      * 
      * @param plain char array need to be deciphered.
      * @return char array of the deciphered string
@@ -58,7 +58,7 @@ public class EncryptionUtil {
     }
 
     /**
-     * Clear the encrypted char array. <br/>
+     * Clear the encrypted char array. <br>
      * 
      * @param plain char array to be cleared.
      * @since SDNO 0.5

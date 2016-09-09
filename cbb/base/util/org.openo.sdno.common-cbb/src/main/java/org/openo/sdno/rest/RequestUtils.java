@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -28,7 +28,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Utility class to help construct a restful request. <br/>
+ * Utility class to help construct a restful request. <br>
  * 
  * @author
  * @version SDNO 0.5 2016-4-13
@@ -42,7 +42,7 @@ public class RequestUtils {
     }
 
     /**
-     * construct a restful request fill in the ContentType field and the request body. <br/>
+     * construct a restful request fill in the ContentType field and the request body. <br>
      * 
      * @param sendObj object need to send.
      * @return RestfulParametes filled with message.
@@ -60,7 +60,7 @@ public class RequestUtils {
     }
 
     /**
-     * Get HttpServletRequestBody. <br/>
+     * Get HttpServletRequestBody. <br>
      * 
      * @param request HttpServletRequest need to parse
      * @return body of HttpServletRequest

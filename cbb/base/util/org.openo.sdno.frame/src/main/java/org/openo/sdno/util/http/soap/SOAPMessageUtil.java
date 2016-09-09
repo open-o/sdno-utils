@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +35,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * SOAP message util class. Provide SOAP message sending function.<br/>
+ * SOAP message util class. Provide SOAP message sending function.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-4-12
@@ -51,7 +51,7 @@ public class SOAPMessageUtil {
     }
 
     /**
-     * Get the only instance of the SOAPMessageUtil class.<br/>
+     * Get the only instance of the SOAPMessageUtil class.<br>
      * 
      * @return The only instance of the SOAPMessageUtil class.
      * @since SDNO 0.5
@@ -70,7 +70,7 @@ public class SOAPMessageUtil {
 
     /**
      * Send SOAP message. Use input bytes create a SOAP message object, and send it to the input
-     * URL.<br/>
+     * URL.<br>
      * 
      * @param msgUrl URL which identifies where the message should be sent.
      * @param bytes The message to be sent
@@ -131,7 +131,7 @@ public class SOAPMessageUtil {
     }
 
     /**
-     * Send input SOAP message object to the input URL.<br/>
+     * Send input SOAP message object to the input URL.<br>
      * 
      * @param message The message to be sent
      * @param urlPath URL which identifies where the message should be sent.
@@ -188,7 +188,7 @@ public class SOAPMessageUtil {
     }
 
     /**
-     * Construct SOAP message object by an byte array.<br/>
+     * Construct SOAP message object by an byte array.<br>
      * 
      * @param bytes Input bytes
      * @return SOAP message object which is created.
@@ -220,7 +220,7 @@ public class SOAPMessageUtil {
 
     /**
      * Writes input SOAP message object to the output stream, then converts its contents into a
-     * string.<br/>
+     * string.<br>
      * 
      * @param message SOAP message object
      * @return String which is converted by input

@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -30,7 +30,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Tool class for IP address processing and calculating.<br/>
+ * Tool class for IP address processing and calculating.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-4-28
@@ -51,7 +51,7 @@ public class IpUtils {
     }
 
     /**
-     * Verify the IP address is valid or not.<br/>
+     * Verify the IP address is valid or not.<br>
      * 
      * @param ip IP address
      * @return Returns true when valid, otherwise returns false.
@@ -77,7 +77,7 @@ public class IpUtils {
     }
 
     /**
-     * Verify the CIDR is valid or not.<br/>
+     * Verify the CIDR is valid or not.<br>
      * 
      * @param cidr CIDR
      * @return Returns true when valid, otherwise returns false.
@@ -113,7 +113,7 @@ public class IpUtils {
     }
 
     /**
-     * Check if it is reserved IP, such as 0, 255.<br/>
+     * Check if it is reserved IP, such as 0, 255.<br>
      * 
      * @param ipAddr IP address
      * @return Return true when it is reserved IP, otherwise return false.
@@ -126,7 +126,7 @@ public class IpUtils {
     }
 
     /**
-     * Check if it is reserved IP, such as 0, 255.<br/>
+     * Check if it is reserved IP, such as 0, 255.<br>
      * 
      * @param ipAddr Decimal IP address
      * @return Return true when it is reserved IP, otherwise return false.
@@ -138,7 +138,7 @@ public class IpUtils {
     }
 
     /**
-     * Calculate subnet mask.<br/>
+     * Calculate subnet mask.<br>
      * 
      * @param ipsubnet Start IP address
      * @param ipNum IP address number
@@ -167,7 +167,7 @@ public class IpUtils {
     }
 
     /**
-     * Calculate subnet IP address.<br/>
+     * Calculate subnet IP address.<br>
      * 
      * @param minIp Start IP address
      * @param masks Collection of subnet masks
@@ -187,7 +187,7 @@ public class IpUtils {
     }
 
     /**
-     * Calculate reversed IP mask.<br/>
+     * Calculate reversed IP mask.<br>
      * 
      * @param mask IP mask
      * @return Reversed IP mask
@@ -202,7 +202,7 @@ public class IpUtils {
     }
 
     /**
-     * Get IP address from CIDR.<br/>
+     * Get IP address from CIDR.<br>
      * 
      * @param cidr Format address, such as 10.10.10.0/24
      * @return IP address
@@ -224,7 +224,7 @@ public class IpUtils {
     }
 
     /**
-     * Get IP mask from CIDR.<br/>
+     * Get IP mask from CIDR.<br>
      * 
      * @param cidr Format address, such as 10.10.10.0/24
      * @return IP mask
@@ -246,7 +246,7 @@ public class IpUtils {
     }
 
     /**
-     * Convert decimal IP to string.<br/>
+     * Convert decimal IP to string.<br>
      * 
      * @param ipNum Decimal IP address
      * @return String of IP address
@@ -258,7 +258,7 @@ public class IpUtils {
     }
 
     /**
-     * Convert string IP to decimal IP.<br/>
+     * Convert string IP to decimal IP.<br>
      * 
      * @param strip String of IP address
      * @return Decimal IP
@@ -281,7 +281,7 @@ public class IpUtils {
     }
 
     /**
-     * Convert string IP to decimal IP.<br/>
+     * Convert string IP to decimal IP.<br>
      * 
      * @param ip String of IP address
      * @return Decimal IP
@@ -301,7 +301,7 @@ public class IpUtils {
     }
 
     /**
-     * Convert decimal IP to string.<br/>
+     * Convert decimal IP to string.<br>
      * 
      * @param ip Decimal IP address
      * @return String of IP address
@@ -332,7 +332,7 @@ public class IpUtils {
     }
 
     /**
-     * Convert decimal IP to string.<br/>
+     * Convert decimal IP to string.<br>
      * 
      * @param ipInt Decimal IP address
      * @return String of IP address
@@ -344,7 +344,7 @@ public class IpUtils {
     }
 
     /**
-     * Convert the IP address into an array of bytes.<br/>
+     * Convert the IP address into an array of bytes.<br>
      * 
      * @param ipAddr String of IP address
      * @return Byte array of IP address
@@ -366,7 +366,7 @@ public class IpUtils {
     }
 
     /**
-     * Convert byte array of IP address into decimal IP by bit operation.<br/>
+     * Convert byte array of IP address into decimal IP by bit operation.<br>
      * 
      * @param bytes Byte array of IP address
      * @return decimal IP
@@ -381,7 +381,7 @@ public class IpUtils {
     }
 
     /**
-     * Convert string IP to decimal IP.<br/>
+     * Convert string IP to decimal IP.<br>
      * 
      * @param ipAddr String of IP address
      * @return Decimal IP
@@ -397,7 +397,7 @@ public class IpUtils {
     }
 
     /**
-     * Remove the spaces in the IP address.<br/>
+     * Remove the spaces in the IP address.<br>
      * 
      * @param srcIp IP address before trimming
      * @return IP address after trimming
@@ -426,7 +426,7 @@ public class IpUtils {
     }
 
     /**
-     * Convert IP mask to numbers of mask bits.<br/>
+     * Convert IP mask to numbers of mask bits.<br>
      * 
      * @param mask IP mask
      * @return Numbers of mask bits
@@ -454,7 +454,7 @@ public class IpUtils {
     }
 
     /**
-     * Convert numbers of mask bits to IP mask.<br/>
+     * Convert numbers of mask bits to IP mask.<br>
      * 
      * @param prefix Numbers of mask bits
      * @return IP mask
@@ -482,7 +482,7 @@ public class IpUtils {
     }
 
     /**
-     * Calculate subnet IP address.<br/>
+     * Calculate subnet IP address.<br>
      * 
      * @param ip IP address
      * @param mask Subnet mask
@@ -507,7 +507,7 @@ public class IpUtils {
     }
 
     /**
-     * Calculate subnet IP address.<br/>
+     * Calculate subnet IP address.<br>
      * 
      * @param cidr Format address, such as 10.10.10.0/24
      * @return Subnet IP address

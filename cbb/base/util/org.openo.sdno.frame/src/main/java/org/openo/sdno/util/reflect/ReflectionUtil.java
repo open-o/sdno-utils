@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -26,7 +26,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Tools class of reflection.<br/>
+ * Tools class of reflection.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-5-19
@@ -40,7 +40,7 @@ public class ReflectionUtil {
     }
 
     /**
-     * Used to access private members of the parent class.<br/>
+     * Used to access private members of the parent class.<br>
      * 
      * @param object The object containing the field
      * @param fieldName Field name
@@ -68,7 +68,7 @@ public class ReflectionUtil {
     }
 
     /**
-     * Gets the value of a static member by reflection.<br/>
+     * Gets the value of a static member by reflection.<br>
      * 
      * @param classVar Object class
      * @param fieldName Field name
@@ -96,7 +96,7 @@ public class ReflectionUtil {
     }
 
     /**
-     * Set value of the specified field in the object, used to set private members.<br/>
+     * Set value of the specified field in the object, used to set private members.<br>
      * 
      * @param object The object containing the field
      * @param fieldName Field name
@@ -124,7 +124,7 @@ public class ReflectionUtil {
     }
 
     /**
-     * Used to set the private members in specified class.<br/>
+     * Used to set the private members in specified class.<br>
      * 
      * @param object The object containing the field
      * @param clazz Specified class
@@ -154,7 +154,7 @@ public class ReflectionUtil {
     }
 
     /**
-     * Invoke the method of the object.<br/>
+     * Invoke the method of the object.<br>
      * 
      * @param object Destination object
      * @param methodName Invoke method name
@@ -234,7 +234,7 @@ public class ReflectionUtil {
 
     /**
      * Incoming enumeration class object, as well as the string of enumeration value, return the
-     * corresponding enumeration.<br/>
+     * corresponding enumeration.<br>
      * 
      * @param clazz Class object
      * @param value enumeration value

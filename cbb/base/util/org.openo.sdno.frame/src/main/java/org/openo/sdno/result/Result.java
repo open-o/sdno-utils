@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -19,7 +19,7 @@ package org.openo.sdno.result;
 import org.openo.sdno.exception.ErrorCode;
 
 /**
- * Generic result object.<br/>
+ * Generic result object.<br>
  * 
  * @param <T> Result object
  * @author
@@ -32,7 +32,7 @@ public class Result<T> {
     protected T resultObj;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */
@@ -41,7 +41,7 @@ public class Result<T> {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param operationResult Operation result
@@ -51,7 +51,7 @@ public class Result<T> {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param other Result object
@@ -62,7 +62,7 @@ public class Result<T> {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param operationResult Operation result
@@ -74,7 +74,7 @@ public class Result<T> {
     }
 
     /**
-     * Success result.<br/>
+     * Success result.<br>
      * 
      * @return Success result
      * @since SDNO 0.5
@@ -84,7 +84,7 @@ public class Result<T> {
     }
 
     /**
-     * Success result.<br/>
+     * Success result.<br>
      * 
      * @param obj Object
      * @return Success result
@@ -95,7 +95,7 @@ public class Result<T> {
     }
 
     /**
-     * Failed result.<br/>
+     * Failed result.<br>
      * 
      * @return Failed result
      * @since SDNO 0.5
@@ -105,7 +105,7 @@ public class Result<T> {
     }
 
     /**
-     * Failed result.<br/>
+     * Failed result.<br>
      * 
      * @param obj Object
      * @return Failed result
@@ -116,7 +116,7 @@ public class Result<T> {
     }
 
     /**
-     * Partly success result.<br/>
+     * Partly success result.<br>
      * 
      * @return Partly success result
      * @since SDNO 0.5
@@ -126,7 +126,7 @@ public class Result<T> {
     }
 
     /**
-     * Partly success result.<br/>
+     * Partly success result.<br>
      * 
      * @param obj Object
      * @return Partly success result

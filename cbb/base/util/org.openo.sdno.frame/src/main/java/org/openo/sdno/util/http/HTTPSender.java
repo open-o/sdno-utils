@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -44,15 +44,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * HTTP sender class. <br/>
+ * HTTP sender class. <br>
  * <p>
  * Only supports HTTPS connection, through the string in URL to determine the HTTPS connection,
- * you<br/>
+ * you<br>
  * can specify the host address and the authentication of the certificate.If you do not pass in
- * the<br/>
+ * the<br>
  * relevant parameters (TrustManager, hostNameVerifier), the default method which does not do
- * the<br/>
- * inspection will be used.<br/>
+ * the<br>
+ * inspection will be used.<br>
  * </p>
  * 
  * @author
@@ -85,7 +85,7 @@ public class HTTPSender {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */
@@ -94,7 +94,7 @@ public class HTTPSender {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param sslContext SSL context
@@ -104,7 +104,7 @@ public class HTTPSender {
     }
 
     /**
-     * Set defaultHostnameVerifier of HttpsURLConnection.<br/>
+     * Set defaultHostnameVerifier of HttpsURLConnection.<br>
      * 
      * @param hostNameVerifier Host name verifier
      * @since SDNO 0.5
@@ -142,10 +142,10 @@ public class HTTPSender {
     }
 
     /**
-     * Send message after authentication.<br/>
-     * 1. Send authentication messages to Server. <br/>
-     * 2. After the success of the certification, send message.<br/>
-     * 3. After receiving the response message, close the HTTP connection.<br/>
+     * Send message after authentication.<br>
+     * 1. Send authentication messages to Server. <br>
+     * 2. After the success of the certification, send message.<br>
+     * 3. After receiving the response message, close the HTTP connection.<br>
      * 
      * @param authReq Authentication request
      * @param request Request to be sent after authentication
@@ -199,7 +199,7 @@ public class HTTPSender {
     }
 
     /**
-     * Normal HTTP send.<br/>
+     * Normal HTTP send.<br>
      * 
      * @param urlStr URL
      * @param body message body
@@ -251,7 +251,7 @@ public class HTTPSender {
     }
 
     /**
-     * Send input message to input URL, and get X-subject-Token from response message's header.<br/>
+     * Send input message to input URL, and get X-subject-Token from response message's header.<br>
      * 
      * @param urlStr URL
      * @param body Message body

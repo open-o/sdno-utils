@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,7 +25,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Reflect to lookup field or class definition.<br/>
+ * Reflect to lookup field or class definition.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-4-13
@@ -45,7 +45,7 @@ public class ClassFieldManager {
     }
 
     /**
-     * Get the instance of ClassFieldManager.<br/>
+     * Get the instance of ClassFieldManager.<br>
      * 
      * @return Instance of ClassFieldManager
      * @since SDNO 0.5
@@ -55,7 +55,7 @@ public class ClassFieldManager {
     }
 
     /**
-     * Get the specified field from class object.<br/>
+     * Get the specified field from class object.<br>
      * 
      * @param clazz Class object
      * @param fieldName Field name
@@ -76,7 +76,7 @@ public class ClassFieldManager {
     }
 
     /**
-     * Get all fields from class object.<br/>
+     * Get all fields from class object.<br>
      * 
      * @param clazz Class object
      * @return Collection of all fields
@@ -112,7 +112,7 @@ public class ClassFieldManager {
 }
 
 /**
- * Lookup the key of the field in the system.<br/>
+ * Lookup the key of the field in the system.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-4-13
@@ -124,7 +124,7 @@ class FieldKey {
     private String fieldName;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */
@@ -134,7 +134,7 @@ class FieldKey {
     }
 
     /**
-     * Get hash code of current object.<br/>
+     * Get hash code of current object.<br>
      * 
      * @return Hash code of current object
      * @since SDNO 0.5
@@ -149,7 +149,7 @@ class FieldKey {
     }
 
     /**
-     * Check whether the object is equal to the current object.<br/>
+     * Check whether the object is equal to the current object.<br>
      * 
      * @param obj Object to be checked
      * @return Return true if equal, otherwise returns false

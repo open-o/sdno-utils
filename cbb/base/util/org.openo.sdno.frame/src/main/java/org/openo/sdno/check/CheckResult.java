@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -17,7 +17,7 @@
 package org.openo.sdno.check;
 
 /**
- * <br/>
+ * <br>
  * <p>
  * Response data.
  * </p>
@@ -38,7 +38,7 @@ public class CheckResult {
     private String message;
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @since SDNO 0.5
      * @param result error code
@@ -50,7 +50,7 @@ public class CheckResult {
     }
 
     /**
-     * Returns the error code<br/>
+     * Returns the error code<br>
      * 
      * @return error code of the response.
      * @since SDNO 0.5
@@ -64,7 +64,7 @@ public class CheckResult {
     }
 
     /**
-     * <br/>
+     * <br>
      * 
      * @return error message of the response.
      * @since SDNO 0.5
@@ -78,7 +78,7 @@ public class CheckResult {
     }
 
     /**
-     * Returns the error information <br/>
+     * Returns the error information <br>
      * 
      * @return error code and error message of the response
      * @since SDNO 0.5

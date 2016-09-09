@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -23,7 +23,7 @@ import org.openo.sdno.exception.ErrorCode;
 
 
 /**
- * ErrorCode message with list of error code information and a global error info.<br/>
+ * ErrorCode message with list of error code information and a global error info.<br>
  * 
  * @author
  * @version SDNO 0.5 13-Apr-2016
@@ -35,7 +35,7 @@ public class ErrorCodeMsg {
     private List<ErrorCodeInfo> smallErrorCodeList;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */
@@ -44,7 +44,7 @@ public class ErrorCodeMsg {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param retCode Error code

@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +31,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Class for properties load, property get. <br/>
+ * Class for properties load, property get. <br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-16
@@ -53,7 +53,7 @@ public class ResourceUtil {
     }
 
     /**
-     * Load all the properties in application properties folder.<br/>
+     * Load all the properties in application properties folder.<br>
      * 
      * @param appPath Application root directory.
      * @param appName Application name.
@@ -76,7 +76,7 @@ public class ResourceUtil {
     }
 
     /**
-     * Get message from resource map; <br/>
+     * Get message from resource map; <br>
      * 
      * @param key Key of resource to get.
      * @return Value of key, if can't find in map return key as String instead.
@@ -148,7 +148,7 @@ public class ResourceUtil {
     }
 
     /**
-     * Class for file type filter. <br/>
+     * Class for file type filter. <br>
      * 
      * @author
      * @version SDNO 0.5 2016-6-15
@@ -161,7 +161,7 @@ public class ResourceUtil {
         private final String[] fileTypes;
 
         /**
-         * Constructor<br/>
+         * Constructor<br>
          * 
          * @param fileTypes List of file types(.extensionName).
          * @since SDNO 0.5

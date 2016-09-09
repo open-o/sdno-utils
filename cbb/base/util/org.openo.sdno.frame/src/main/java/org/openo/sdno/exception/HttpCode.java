@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -17,7 +17,7 @@
 package org.openo.sdno.exception;
 
 /**
- * Class to check HTTP return code <br/>
+ * Class to check HTTP return code <br>
  * 
  * @author
  * @version SDNO 0.5 13-Apr-2016
@@ -35,7 +35,7 @@ public class HttpCode {
     public static final int EXCEED_REQUEST = 413;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */
@@ -46,7 +46,7 @@ public class HttpCode {
     /**
      * HTTP 2xx (success) indicates a successfully processed request status code. 200 (success)
      * server has successfully processed the request. Typically, this means that the server provided
-     * the requested page.<br/>
+     * the requested page.<br>
      * 
      * @param httpCode error code return from http request
      * @return success if the http response code is 2xx

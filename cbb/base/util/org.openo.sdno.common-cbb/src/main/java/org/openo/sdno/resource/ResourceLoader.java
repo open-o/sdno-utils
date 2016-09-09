@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -26,7 +26,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Astract class of properties load. <br/>
+ * Astract class of properties load. <br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-16
@@ -42,7 +42,7 @@ public abstract class ResourceLoader {
     }
 
     /**
-     * Set loder calss for properties file load. <br/>
+     * Set loder calss for properties file load. <br>
      * 
      * @param clazzImpl Loder class.
      * @since SDNO 0.5
@@ -52,7 +52,7 @@ public abstract class ResourceLoader {
     }
 
     /**
-     * Create loader.<br/>
+     * Create loader.<br>
      * 
      * @return ResourceLoader class instance.
      * @since SDNO 0.5
@@ -70,7 +70,7 @@ public abstract class ResourceLoader {
     }
 
     /**
-     * Load properties file. <br/>
+     * Load properties file. <br>
      * 
      * @param is InputStream.
      * @throws IOException IOException
@@ -79,7 +79,7 @@ public abstract class ResourceLoader {
     public abstract void load(InputStream is) throws IOException;
 
     /**
-     * Get keys in properties. <br/>
+     * Get keys in properties. <br>
      * 
      * @return Keys iterator.
      * @since SDNO 0.5
@@ -87,7 +87,7 @@ public abstract class ResourceLoader {
     public abstract Iterator<String> getKeys();
 
     /**
-     * Get value by key. <br/>
+     * Get value by key. <br>
      * 
      * @param key Key
      * @return Value
@@ -96,7 +96,7 @@ public abstract class ResourceLoader {
     public abstract String getValue(String key);
 
     /**
-     * Class for properties load. <br/>
+     * Class for properties load. <br>
      * 
      * @author
      * @version SDNO 0.5 2016-6-16
