@@ -1,13 +1,19 @@
 [
 	{
-		"containKey": "/svc/mss/v2",
-		"replace": "/org.openo.sdno.mss.service",
+		"containKey": "/sdnomss/v1",
+		"replace": "/mss-service",
 		"host": "127.0.0.1",
 		"port": 8080
 	},
 	{
-		"containKey": "/brs/v1",
+		"containKey": "/sdnobrs/v1",
 		"replace": "/org.openo.sdno.brs",
+		"host": "127.0.0.1",
+		"port": 8080
+	},
+	{
+		"containKey": "/openoapi/sbi-l3vpn/v1",
+		"replace": "",
 		"host": "127.0.0.1",
 		"port": 8080
 	}

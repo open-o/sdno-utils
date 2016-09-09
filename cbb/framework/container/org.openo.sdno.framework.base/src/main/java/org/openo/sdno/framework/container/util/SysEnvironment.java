@@ -19,17 +19,14 @@ package org.openo.sdno.framework.container.util;
 import java.io.File;
 
 import org.openo.baseservice.util.impl.SystemEnvVariablesFactory;
-import org.openo.baseservice.util.inf.SystemEnvVariables;
 
 /**
- * Utility class to provide interfaces to operate upon the system or environment settings.<br/>
+ * Utility class to provide interfaces to operate upon the system or environment settings.<br>
  * 
  * @author
  * @version SDNO 0.5 24-Mar-2016
  */
 public class SysEnvironment {
-
-    private static final String LOOP_BACK_ADDRESS = "127.0.0.1";
 
     /**
      * Application configuration directory.
@@ -41,7 +38,7 @@ public class SysEnvironment {
     private static final String MODULE = "module";
 
     /**
-     * private Constructor to avoid instantiation.<br/>
+     * private Constructor to avoid instantiation.<br>
      * 
      * @since SDNO 0.5
      */
@@ -49,7 +46,7 @@ public class SysEnvironment {
     }
 
     /**
-     * Get the application root directory.<br/>
+     * Get the application root directory.<br>
      * 
      * @return path of the application root directory
      * @since SDNO 0.5
@@ -59,18 +56,18 @@ public class SysEnvironment {
     }
 
     /**
-     * System Global configuration directory.<br/>
+     * System Global configuration directory.<br>
      * 
      * @return path of the Global configuration directory
      * @since SDNO 0.5
      */
     public static final String getGlobalEtcPath() {
-        return SystemEnvVariablesFactory.getInstance().getAppRoot() + File.separator + "rtsp" + File.separator + RTSP_CACHE
-                + File.separator + "etc";
+        return SystemEnvVariablesFactory.getInstance().getAppRoot() + File.separator + "rtsp" + File.separator
+                + RTSP_CACHE + File.separator + "etc";
     }
 
     /**
-     * Application configuration directory.<br/>
+     * Application configuration directory.<br>
      * 
      * @return path of the Application configuration directory
      * @since SDNO 0.5
@@ -80,7 +77,7 @@ public class SysEnvironment {
     }
 
     /**
-     * Get the parent of Application configuration directory.<br/>
+     * Get the parent of Application configuration directory.<br>
      * 
      * @return path of the parent of Application configuration directory
      * @since SDNO 0.5
@@ -90,7 +87,7 @@ public class SysEnvironment {
     }
 
     /**
-     * Get specific application path.<br/>
+     * Get specific application path.<br>
      * 
      * @param appName specific app name
      * @return path of the specific application
@@ -101,7 +98,7 @@ public class SysEnvironment {
     }
 
     /**
-     * Get specific application config directory.<br/>
+     * Get specific application config directory.<br>
      * 
      * @param appName specific application name
      * @return specific application config directory path
@@ -112,7 +109,7 @@ public class SysEnvironment {
     }
 
     /**
-     * Get specific application var directory.<br/>
+     * Get specific application var directory.<br>
      * 
      * @return Get specific application var directory
      * @since SDNO 0.5
@@ -122,7 +119,7 @@ public class SysEnvironment {
     }
 
     /**
-     * Get the current OS language information.<br/>
+     * Get the current OS language information.<br>
      * 
      * @return the current OS language information
      * @since SDNO 0.5
@@ -132,12 +129,12 @@ public class SysEnvironment {
     }
 
     /**
-     * Get the loopback IP address 127.0.0.1.<br/>
+     * Get the loopback IP address 127.0.0.1.<br>
      * 
      * @return the loopback IP address 127.0.0.1
      * @since SDNO 0.5
      */
     public static final String getLocalHostIp() {
-        return LOOP_BACK_ADDRESS;
+        return IpConfig.getLocalHost();
     }
 }

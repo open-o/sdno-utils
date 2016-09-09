@@ -27,10 +27,11 @@ import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.baseservice.roa.util.restclient.RestfulOptions;
 import org.openo.baseservice.roa.util.restclient.RestfulParametes;
 import org.openo.baseservice.roa.util.restclient.RestfulResponse;
+import org.openo.sdno.framework.container.util.IpConfig;
 import org.openo.sdno.framework.container.util.JsonUtil;
 
 /**
- * Restful processor class.<br/>
+ * Restful processor class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-3-26
@@ -38,7 +39,7 @@ import org.openo.sdno.framework.container.util.JsonUtil;
 public class RestProcessor implements IProcessor {
 
     /**
-     * Do the action and realization the processor function.<br/>
+     * Do the action and realization the processor function.<br>
      * 
      * @param action Restful method
      * @param uri the objective Url
@@ -52,7 +53,7 @@ public class RestProcessor implements IProcessor {
             throws ServiceException {
         try {
             RestfulOptions restOptions = new RestfulOptions();
-            restOptions.setHost("127.0.0.1");
+            restOptions.setHost(IpConfig.getLocalHost());
             restOptions.setPort(12306);
 
             return sendWithReplaceUrl(action, uri, restParametes, restOptions);
@@ -62,7 +63,7 @@ public class RestProcessor implements IProcessor {
     }
 
     /**
-     * Do the action and realization the processor function.<br/>
+     * Do the action and realization the processor function.<br>
      * 
      * @param action Restful method
      * @param uri the objective Url
@@ -76,7 +77,7 @@ public class RestProcessor implements IProcessor {
     public RestfulResponse doAction(RestfulMethod action, String uri, RestfulParametes restParametes,
             RestfulOptions restOptions) throws ServiceException {
         try {
-            restOptions.setHost("127.0.0.1");
+            restOptions.setHost(IpConfig.getLocalHost());
             restOptions.setPort(12306);
             return sendWithReplaceUrl(action, uri, restParametes, restOptions);
         } catch(IOException e) {
@@ -102,6 +103,7 @@ public class RestProcessor implements IProcessor {
                 if(configMap.containsKey("port")) {
                     restOptions.setPort(Integer.valueOf(configMap.get("port")));
                 }
+                break;
             }
         }
         return action.method(url, restParametes, restOptions);

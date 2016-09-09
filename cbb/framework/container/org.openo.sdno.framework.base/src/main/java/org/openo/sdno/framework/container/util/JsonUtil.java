@@ -16,6 +16,7 @@
 
 package org.openo.sdno.framework.container.util;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.codehaus.jackson.map.DeserializationConfig;
@@ -25,7 +26,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Json tools class, packaging a number of commonly used Json methods.<br/>
+ * Json tools class, packaging a number of commonly used Json methods.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-3-26
@@ -38,7 +39,7 @@ public final class JsonUtil {
     }
 
     /**
-     * Convert object to JSON.<br/>
+     * Convert object to JSON.<br>
      * 
      * @param obj The object to be converted
      * @return The JSON string
@@ -54,7 +55,7 @@ public final class JsonUtil {
     }
 
     /**
-     * Convert JSON to object.<br/>
+     * Convert JSON to object.<br>
      * 
      * @param jsonStr The JSON to be converted
      * @param objClass The object class
@@ -68,13 +69,13 @@ public final class JsonUtil {
             return mapper.readValue(jsonStr, objClass);
         } catch(IOException ex) {
             LOGGER.error("Parser to object error.", ex);
-            throw new IllegalArgumentException("Parser json to object error, json = " + jsonStr + ", expect class = "
-                    + objClass, ex);
+            throw new IllegalArgumentException(
+                    "Parser json to object error, json = " + jsonStr + ", expect class = " + objClass, ex);
         }
     }
 
     /**
-     * Convert JSON to object.<br/>
+     * Convert JSON to object.<br>
      * 
      * @param jsonStr The JSON to be converted
      * @param typeRef The object type
@@ -88,8 +89,30 @@ public final class JsonUtil {
             return mapper.readValue(jsonStr, typeRef);
         } catch(IOException ex) {
             LOGGER.error("Parser to object by type reference error.", ex);
-            throw new IllegalArgumentException("Parser json to object error, json = " + jsonStr + ", expect type = "
-                    + typeRef.getType(), ex);
+            throw new IllegalArgumentException(
+                    "Parser json to object error, json = " + jsonStr + ", expect type = " + typeRef.getType(), ex);
+        }
+    }
+
+    /**
+     * Turn a json file in to a java object. <br>
+     * 
+     * @param file the json file need to change.
+     * @param objClass the java class json string represent.
+     * @return the java object parsed from json string.
+     * @since SDNO 0.5
+     */
+    public static <T> T fromJson(File file, Class<T> objClass) {
+        try {
+
+            ObjectMapper mapper = new ObjectMapper();
+
+            mapper.configure(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+            return mapper.readValue(file, objClass);
+        } catch(IOException ex) {
+            LOGGER.error("Parser to object error.", ex);
+            throw new IllegalArgumentException(
+                    "Parser json to object error, file = " + file.getName() + ", expect class = " + objClass, ex);
         }
     }
 }

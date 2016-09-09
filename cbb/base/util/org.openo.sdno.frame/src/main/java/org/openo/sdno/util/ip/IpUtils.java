@@ -17,15 +17,13 @@
 package org.openo.sdno.util.ip;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
-import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.exception.ParametersException;
-import org.openo.sdno.frame.IPv4Util;
+import org.openo.sdno.framework.container.util.IpConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,10 +36,6 @@ import org.slf4j.LoggerFactory;
 public class IpUtils {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(IpUtils.class);
-
-    private static final String MAXIMUM_IP_ADDRESS = "255.255.255.255";
-
-    private static final String MINIMUM_IP_ADDRESS = "0.0.0.0";
 
     private static final String REGEX =
             "([1-9]|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])(\\.(\\d|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])){3}/\\d{1,2}";
@@ -113,95 +107,6 @@ public class IpUtils {
     }
 
     /**
-     * Check if it is reserved IP, such as 0, 255.<br>
-     * 
-     * @param ipAddr IP address
-     * @return Return true when it is reserved IP, otherwise return false.
-     * @since SDNO 0.5
-     */
-    public static boolean isReservedIp(String ipAddr) {
-        long ipvalue = ipToLong(ipAddr);
-        long v = ipvalue & 255;
-        return (v == 0) || (v == 255);
-    }
-
-    /**
-     * Check if it is reserved IP, such as 0, 255.<br>
-     * 
-     * @param ipAddr Decimal IP address
-     * @return Return true when it is reserved IP, otherwise return false.
-     * @since SDNO 0.5
-     */
-    public static boolean isReservedIp(long ipAddr) {
-        long v = ipAddr & 255;
-        return (v == 0) || (v == 255);
-    }
-
-    /**
-     * Calculate subnet mask.<br>
-     * 
-     * @param ipsubnet Start IP address
-     * @param ipNum IP address number
-     * @return Subnet mask
-     * @since SDNO 0.5
-     */
-    public static int getUserNetworkMask(String ipsubnet, int ipNum) {
-        int realnum = 0;
-        int count = 0;
-        long ipvalue = ipToLong(ipsubnet);
-        while(realnum < ipNum) {
-            if(!isReservedIp(ipvalue)) {
-                realnum++;
-            }
-            ipvalue++;
-            count++;
-        }
-        int userNetworkMask = 0;
-        int number = 1;
-        while(number < count) {
-            number = number * 2;
-            userNetworkMask++;
-        }
-        userNetworkMask = 32 - userNetworkMask;
-        return userNetworkMask;
-    }
-
-    /**
-     * Calculate subnet IP address.<br>
-     * 
-     * @param minIp Start IP address
-     * @param masks Collection of subnet masks
-     * @return Subnet IP address
-     * @since SDNO 0.5
-     */
-    public static String getUserSubnet(String minIp, List<Integer> masks) {
-        long usedIpNum = 0;
-
-        for(int mask : masks) {
-            int dmask = 32 - mask;
-            double useripNum = Math.pow(2, dmask);
-            usedIpNum += useripNum;
-        }
-        long ipnum = IPv4Util.ipToInt(minIp) + usedIpNum;
-        return longToIp(ipnum);
-    }
-
-    /**
-     * Calculate reversed IP mask.<br>
-     * 
-     * @param mask IP mask
-     * @return Reversed IP mask
-     * @since SDNO 0.5
-     */
-    public static String getReverseIpMask(int mask) {
-        if(mask == 0) {
-            return MAXIMUM_IP_ADDRESS;
-        }
-        int srcMask = 0xffffffff - (0xffffffff << (32 - mask));
-        return IpUtils.intToIp(srcMask);
-    }
-
-    /**
      * Get IP address from CIDR.<br>
      * 
      * @param cidr Format address, such as 10.10.10.0/24
@@ -221,40 +126,6 @@ public class IpUtils {
         }
         String[] splited = cidr.split("/");
         return splited[0];
-    }
-
-    /**
-     * Get IP mask from CIDR.<br>
-     * 
-     * @param cidr Format address, such as 10.10.10.0/24
-     * @return IP mask
-     * @since SDNO 0.5
-     */
-    public static int getIPMaskFromCIDR(String cidr) {
-        if((null == cidr) || "".equals(cidr)) {
-            LOGGER.error("getIPMaskFromCIDR cidr is empty.");
-            return -1;
-        }
-        Pattern pattern = Pattern.compile(REGEX);
-        Matcher matcher = pattern.matcher(cidr);
-        if(!matcher.matches()) {
-            LOGGER.error("The cidr's format error.");
-            throw new ParametersException("The cidr's format error.");
-        }
-        String[] splited = cidr.split("/");
-        return Integer.valueOf(splited[splited.length - 1]);
-    }
-
-    /**
-     * Convert decimal IP to string.<br>
-     * 
-     * @param ipNum Decimal IP address
-     * @return String of IP address
-     * @since SDNO 0.5
-     */
-    public static String longToIp(Long ipNum) {
-        return ((ipNum >> 24) & 0xFF) + "." + ((ipNum >> 16) & 0xFF) + "." + ((ipNum >> 8) & 0xFF) + "."
-                + (ipNum & 0xFF);
     }
 
     /**
@@ -278,26 +149,6 @@ public class IpUtils {
         ip[2] = Long.parseLong(strip.substring(position2 + 1, position3));
         ip[3] = Long.parseLong(strip.substring(position3 + 1));
         return (ip[0] * 256 * 256 * 256) + (ip[1] * 256 * 256) + (ip[2] * 256) + ip[3];
-    }
-
-    /**
-     * Convert string IP to decimal IP.<br>
-     * 
-     * @param ip String of IP address
-     * @return Decimal IP
-     * @since SDNO 0.5
-     */
-    public static long convertIp2Long(String ip) {
-        if(!isValidAddress(ip)) {
-            LOGGER.error("convertIp2Long ip is not valid.");
-            return -1;
-        }
-        String[] split = ip.split("\\.");
-        long part1 = Long.parseLong(split[0]);
-        long part2 = Long.parseLong(split[1]);
-        long part3 = Long.parseLong(split[2]);
-        long part4 = Long.parseLong(split[3]);
-        return part4 + (part3 * 256) + (part2 * 65536) + (part1 * 16777216);
     }
 
     /**
@@ -332,100 +183,6 @@ public class IpUtils {
     }
 
     /**
-     * Convert decimal IP to string.<br>
-     * 
-     * @param ipInt Decimal IP address
-     * @return String of IP address
-     * @since SDNO 0.5
-     */
-    public static String intToIp(int ipInt) {
-        return new StringBuilder().append((ipInt >> 24) & 0xff).append('.').append((ipInt >> 16) & 0xff).append('.')
-                .append((ipInt >> 8) & 0xff).append('.').append(ipInt & 0xff).toString();
-    }
-
-    /**
-     * Convert the IP address into an array of bytes.<br>
-     * 
-     * @param ipAddr String of IP address
-     * @return Byte array of IP address
-     * @since SDNO 0.5
-     */
-    public static byte[] ipToBytesByReg(String ipAddr) {
-        byte[] ret = new byte[4];
-        try {
-            String[] ipArr = ipAddr.split("\\.");
-            ret[0] = (byte)(Integer.parseInt(ipArr[0]) & 0xFF);
-            ret[1] = (byte)(Integer.parseInt(ipArr[1]) & 0xFF);
-            ret[2] = (byte)(Integer.parseInt(ipArr[2]) & 0xFF);
-            ret[3] = (byte)(Integer.parseInt(ipArr[3]) & 0xFF);
-            return ret;
-        } catch(NumberFormatException e) {
-            LOGGER.error("ipAddr is invalid IP", e);
-            throw new IllegalArgumentException("ipAddr is invalid IP", e);
-        }
-    }
-
-    /**
-     * Convert byte array of IP address into decimal IP by bit operation.<br>
-     * 
-     * @param bytes Byte array of IP address
-     * @return decimal IP
-     * @since SDNO 0.5
-     */
-    public static int bytesToInt(byte[] bytes) {
-        int addr = bytes[3] & 0xFF;
-        addr |= ((bytes[2] << 8) & 0xFF00);
-        addr |= ((bytes[1] << 16) & 0xFF0000);
-        addr |= ((bytes[0] << 24) & 0xFF000000);
-        return addr;
-    }
-
-    /**
-     * Convert string IP to decimal IP.<br>
-     * 
-     * @param ipAddr String of IP address
-     * @return Decimal IP
-     * @since SDNO 0.5
-     */
-    public static int ipToInt(String ipAddr) {
-        try {
-            return bytesToInt(ipToBytesByReg(ipAddr));
-        } catch(IllegalArgumentException e) {
-            LOGGER.error("ipAddr is invalid IP", e);
-            throw new IllegalArgumentException("ipAddr is invalid IP", e);
-        }
-    }
-
-    /**
-     * Remove the spaces in the IP address.<br>
-     * 
-     * @param srcIp IP address before trimming
-     * @return IP address after trimming
-     * @since SDNO 0.5
-     */
-    public static String trimIpAddress(String srcIp) {
-        if(StringUtils.isEmpty(srcIp)) {
-            LOGGER.error("trimIpAddress srcIp is empty.");
-            return null;
-        }
-        String ip = srcIp.replaceAll(" ", "");
-        if(!isValidAddress(ip)) {
-            LOGGER.error("trimIpAddress ip is not valid.");
-            return null;
-        }
-        String[] split = ip.split("\\.");
-        StringBuilder sb = new StringBuilder();
-        sb.append(Integer.parseInt(split[0]));
-        sb.append('.');
-        sb.append(Integer.parseInt(split[1]));
-        sb.append('.');
-        sb.append(Integer.parseInt(split[2]));
-        sb.append('.');
-        sb.append(Integer.parseInt(split[3]));
-        return sb.toString();
-    }
-
-    /**
      * Convert IP mask to numbers of mask bits.<br>
      * 
      * @param mask IP mask
@@ -437,10 +194,10 @@ public class IpUtils {
             LOGGER.error("maskToPrefix ip is not valid.");
             return -1;
         }
-        if(MINIMUM_IP_ADDRESS.equals(mask)) {
+        if(IpConfig.getMinIpAddress().equals(mask)) {
             return 0;
         }
-        if(MAXIMUM_IP_ADDRESS.equals(mask)) {
+        if(IpConfig.getMaxIpAddress().equals(mask)) {
             return 32;
         }
         long ipvalue = ipToLong(mask);
@@ -466,10 +223,10 @@ public class IpUtils {
             return null;
         }
         if(prefix == 0) {
-            return MINIMUM_IP_ADDRESS;
+            return IpConfig.getMinIpAddress();
         }
         if(prefix == 32) {
-            return MAXIMUM_IP_ADDRESS;
+            return IpConfig.getMaxIpAddress();
         }
         char[] chars = new char[32];
         Arrays.fill(chars, '0');
@@ -479,48 +236,6 @@ public class IpUtils {
 
         long ipvalue = Long.parseLong(String.valueOf(chars), 2);
         return convertLong2Ip(ipvalue);
-    }
-
-    /**
-     * Calculate subnet IP address.<br>
-     * 
-     * @param ip IP address
-     * @param mask Subnet mask
-     * @return Subnet IP address
-     * @since SDNO 0.5
-     */
-    public static String calculateIpSubnet(String ip, int mask) {
-        if(!isValidAddress(ip)) {
-            LOGGER.error("calculateIpSubnet ip is not valid.");
-            return null;
-        }
-        if(mask <= 0) {
-            return MINIMUM_IP_ADDRESS;
-        }
-        if(mask >= 32) {
-            return ip;
-        }
-        long ipvalue = convertIp2Long(ip);
-        ipvalue >>= (32 - mask);
-        ipvalue <<= (32 - mask);
-        return convertLong2Ip(ipvalue);
-    }
-
-    /**
-     * Calculate subnet IP address.<br>
-     * 
-     * @param cidr Format address, such as 10.10.10.0/24
-     * @return Subnet IP address
-     * @since SDNO 0.5
-     */
-    public static String calculateIpSubnet(String cidr) throws ServiceException {
-        if(!isValidCidr(cidr)) {
-            LOGGER.error("Invalid CIDR.");
-            throw new ServiceException("Invalid CIDR.");
-        }
-        String subnetIp = getIPFromCIDR(cidr);
-        int subnetMask = getIPMaskFromCIDR(cidr);
-        return calculateIpSubnet(subnetIp, subnetMask);
     }
 
 }

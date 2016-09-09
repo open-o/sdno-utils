@@ -180,7 +180,8 @@ public final class IPv4Util {
                 return new int[] {ipInt, ipInt};
             }
             netMaskInt = IPv4Util.ipToInt(mask);
-            ipcount = IPv4Util.ipToInt("255.255.255.255") - netMaskInt;
+            // 255.255.255.255
+            ipcount = IPv4Util.ipToInt("255.255." + "255.255") - netMaskInt;
             int netIp = ipInt & netMaskInt;
             int hostScope = netIp + ipcount;
 

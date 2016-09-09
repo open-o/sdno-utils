@@ -65,8 +65,8 @@ public class HTTPSenderTest {
 
             @Mock
             protected HttpURLConnection sendMsg(HTTPRequestMessage requst, Map<String, String> authInfo,
-                    HTTPReturnMessage response, boolean isAuth) throws IOException, NoSuchProviderException,
-                    NoSuchAlgorithmException, ServiceException {
+                    HTTPReturnMessage response, boolean isAuth)
+                    throws IOException, NoSuchProviderException, NoSuchAlgorithmException, ServiceException {
                 URL url = new URL("https://test");
                 response.setStatus(200);
                 return new TestHttpURLConnection(url);
@@ -97,8 +97,8 @@ public class HTTPSenderTest {
 
             @Mock
             protected HttpURLConnection sendMsg(HTTPRequestMessage requst, Map<String, String> authInfo,
-                    HTTPReturnMessage response, boolean isAuth) throws IOException, NoSuchProviderException,
-                    NoSuchAlgorithmException, ServiceException {
+                    HTTPReturnMessage response, boolean isAuth)
+                    throws IOException, NoSuchProviderException, NoSuchAlgorithmException, ServiceException {
                 URL url = new URL("https://test");
                 response.setStatus(400);
                 return new TestHttpURLConnection(url);
@@ -145,8 +145,8 @@ public class HTTPSenderTest {
 
             @Mock
             protected HttpURLConnection sendMsg(HTTPRequestMessage requst, Map<String, String> authInfo,
-                    HTTPReturnMessage response, boolean isAuth) throws IOException, NoSuchProviderException,
-                    NoSuchAlgorithmException, ServiceException {
+                    HTTPReturnMessage response, boolean isAuth)
+                    throws IOException, NoSuchProviderException, NoSuchAlgorithmException, ServiceException {
                 URL url = new URL("https://test");
                 response.setStatus(200);
                 return new TestHttpURLConnection(url);
@@ -173,8 +173,8 @@ public class HTTPSenderTest {
 
             @Mock
             protected HttpURLConnection sendMsg(HTTPRequestMessage requst, Map<String, String> authInfo,
-                    HTTPReturnMessage response, boolean isAuth) throws IOException, NoSuchProviderException,
-                    NoSuchAlgorithmException, ServiceException {
+                    HTTPReturnMessage response, boolean isAuth)
+                    throws IOException, NoSuchProviderException, NoSuchAlgorithmException, ServiceException {
                 URL url = new URL("https://test");
                 response.setStatus(500);
                 return new TestHttpURLConnection(url);
@@ -215,8 +215,8 @@ public class HTTPSenderTest {
 
             @Mock
             protected HttpURLConnection sendMsg(HTTPRequestMessage requst, Map<String, String> authInfo,
-                    HTTPReturnMessage response, boolean isAuth) throws IOException, NoSuchProviderException,
-                    NoSuchAlgorithmException, ServiceException {
+                    HTTPReturnMessage response, boolean isAuth)
+                    throws IOException, NoSuchProviderException, NoSuchAlgorithmException, ServiceException {
                 URL url = new URL("https://test");
                 response.setStatus(200);
                 return new TestHttpURLConnection(url);

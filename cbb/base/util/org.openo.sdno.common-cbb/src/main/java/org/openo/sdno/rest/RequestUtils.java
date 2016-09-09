@@ -16,16 +16,9 @@
 
 package org.openo.sdno.rest;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-
-import javax.servlet.http.HttpServletRequest;
-
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.baseservice.roa.util.restclient.RestfulParametes;
 import org.openo.sdno.framework.container.util.JsonUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Utility class to help construct a restful request. <br>
@@ -35,10 +28,7 @@ import org.slf4j.LoggerFactory;
  */
 public class RequestUtils {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(RequestUtils.class);
-
     private RequestUtils() {
-
     }
 
     /**
@@ -57,35 +47,5 @@ public class RequestUtils {
             restParametes.setRawData(strJsonReq);
         }
         return restParametes;
-    }
-
-    /**
-     * Get HttpServletRequestBody. <br>
-     * 
-     * @param request HttpServletRequest need to parse
-     * @return body of HttpServletRequest
-     * @since SDNO 0.5
-     */
-    public static String getHttpServletRequestBody(HttpServletRequest request) {
-        BufferedReader inReader = null;
-        StringBuffer buffer = new StringBuffer();
-        try {
-            inReader = request.getReader();
-            String line = "";
-            while((line = inReader.readLine()) != null) {
-                buffer.append(line);
-            }
-        } catch(IOException e) {
-            LOGGER.error("getHttpServletRequestBody throws IOException!!", e);
-        } finally {
-            if(null != inReader) {
-                try {
-                    inReader.close();
-                } catch(IOException e) {
-                    LOGGER.error("inReader close throws IOException!!", e);
-                }
-            }
-        }
-        return buffer.toString();
     }
 }

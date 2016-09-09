@@ -66,9 +66,9 @@ public class HTTPSender {
 
     private String httpAccept = "application/json";
 
-    private int connectTimeout = 30000;
+    private int connectTimeout = 300000;
 
-    private int readTimeout = 30000;
+    private int readTimeout = 300000;
 
     private SSLContext sslContext = null;
 

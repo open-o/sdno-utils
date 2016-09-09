@@ -67,7 +67,7 @@ public class DefaultEnvUtil {
     }
 
     public static String getAppVersion() {
-        return "1.0.1.0";
+        return "1.0.1";
     }
 
     public static String getAppLogDir() {

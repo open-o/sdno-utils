@@ -19,6 +19,7 @@ package org.openo.sdno.ssl;
 import static org.junit.Assert.assertArrayEquals;
 
 import org.junit.Test;
+import org.openo.sdno.ssl.EncryptionUtil;
 
 public class EncryptionUtilTest {
 

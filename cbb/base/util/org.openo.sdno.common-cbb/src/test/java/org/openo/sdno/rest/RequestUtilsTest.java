@@ -22,6 +22,12 @@ import org.junit.Test;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.framework.container.util.JsonUtil;
 
+/**
+ * RequestUtils test class.<br>
+ * 
+ * @author
+ * @version SDNO 0.5 2016-4-21
+ */
 public class RequestUtilsTest {
 
     private final String testStr = "STRING";

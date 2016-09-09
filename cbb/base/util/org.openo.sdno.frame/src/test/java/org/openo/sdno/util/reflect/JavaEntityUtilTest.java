@@ -35,7 +35,6 @@ import org.openo.sdno.exception.InnerErrorServiceException;
 import org.openo.sdno.util.reflect.JavaEntityUtil;
 import org.openo.sdno.util.reflect.ReflectionUtil;
 
-
 public class JavaEntityUtilTest {
 
     private static final String FIELD_NAME1 = "name";
@@ -64,8 +63,8 @@ public class JavaEntityUtilTest {
         new MockUp<Class>() {
 
             @Mock
-            public Method getMethod(String name, Class<?>... parameterTypes) throws NoSuchMethodException,
-                    SecurityException {
+            public Method getMethod(String name, Class<?>... parameterTypes)
+                    throws NoSuchMethodException, SecurityException {
                 throw new NoSuchMethodException();
             }
         };
