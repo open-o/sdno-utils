@@ -3,16 +3,16 @@
     <parent>
         <groupId>org.openo.sdno.utils</groupId>
         <artifactId>sdno.cbb</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>framework</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
         <module>container</module>
     </modules>
     <properties>
-        <sdno.version>0.0.1-SNAPSHOT</sdno.version>
+        <sdno.version>1.0.0-SNAPSHOT</sdno.version>
     </properties>
 </project>
