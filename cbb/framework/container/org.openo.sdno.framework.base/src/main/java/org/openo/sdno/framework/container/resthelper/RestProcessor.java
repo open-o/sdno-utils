@@ -16,19 +16,11 @@
 
 package org.openo.sdno.framework.container.resthelper;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.cxf.helpers.IOUtils;
-import org.codehaus.jackson.type.TypeReference;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.baseservice.roa.util.restclient.RestfulOptions;
 import org.openo.baseservice.roa.util.restclient.RestfulParametes;
 import org.openo.baseservice.roa.util.restclient.RestfulResponse;
 import org.openo.sdno.framework.container.util.IpConfig;
-import org.openo.sdno.framework.container.util.JsonUtil;
 
 /**
  * Restful processor class.<br>
@@ -51,15 +43,10 @@ public class RestProcessor implements IProcessor {
     @Override
     public RestfulResponse doAction(RestfulMethod action, String uri, RestfulParametes restParametes)
             throws ServiceException {
-        try {
-            RestfulOptions restOptions = new RestfulOptions();
-            restOptions.setHost(IpConfig.getLocalHost());
-            restOptions.setPort(12306);
-
-            return sendWithReplaceUrl(action, uri, restParametes, restOptions);
-        } catch(IOException e) {
-            throw new ServiceException("set config failed", e);
-        }
+        RestfulOptions restOptions = new RestfulOptions();
+        restOptions.setHost(IpConfig.getLocalHost());
+        restOptions.setPort(IpConfig.getRestPort());
+        return action.method(uri, restParametes, restOptions);
     }
 
     /**
@@ -76,37 +63,9 @@ public class RestProcessor implements IProcessor {
     @Override
     public RestfulResponse doAction(RestfulMethod action, String uri, RestfulParametes restParametes,
             RestfulOptions restOptions) throws ServiceException {
-        try {
-            restOptions.setHost(IpConfig.getLocalHost());
-            restOptions.setPort(12306);
-            return sendWithReplaceUrl(action, uri, restParametes, restOptions);
-        } catch(IOException e) {
-            throw new ServiceException("set config failed", e);
-        }
-    }
-
-    private RestfulResponse sendWithReplaceUrl(RestfulMethod action, String uri, RestfulParametes restParametes,
-            RestfulOptions restOptions) throws IOException, ServiceException {
-
-        InputStream busFileInputStream = RestProcessor.class.getClassLoader().getResourceAsStream("busconfig.json");
-
-        String jsonString = IOUtils.toString(busFileInputStream);
-        List<Map<String, String>> configList =
-                JsonUtil.fromJson(jsonString, new TypeReference<List<Map<String, String>>>() {});
-        String url = uri;
-        for(Map<String, String> configMap : configList) {
-            if(uri.contains(configMap.get("containKey"))) {
-                url = configMap.get("replace") + uri;
-                if(configMap.containsKey("host")) {
-                    restOptions.setHost(configMap.get("host"));
-                }
-                if(configMap.containsKey("port")) {
-                    restOptions.setPort(Integer.valueOf(configMap.get("port")));
-                }
-                break;
-            }
-        }
-        return action.method(url, restParametes, restOptions);
+        restOptions.setHost(IpConfig.getLocalHost());
+        restOptions.setPort(IpConfig.getRestPort());
+        return action.method(uri, restParametes, restOptions);
     }
 
 }

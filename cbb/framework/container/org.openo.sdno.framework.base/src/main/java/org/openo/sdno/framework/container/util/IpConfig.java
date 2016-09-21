@@ -32,6 +32,8 @@ import org.slf4j.LoggerFactory;
  */
 public class IpConfig {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(IpConfig.class);
+
     private static final String IP_CONFIG = "ipconfig.properties";
 
     private static final String MAX_IP_ADDRESS = "maxIpAddress";
@@ -42,9 +44,11 @@ public class IpConfig {
 
     private static final String LOCAL_HOST = "localHost";
 
+    private static final String REST_PORT = "restPort";
+
     private static Properties properties = new Properties();
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(IpConfig.class);
+    private static boolean isLoadedSuccess = false;
 
     private IpConfig() {
     }
@@ -93,10 +97,25 @@ public class IpConfig {
         return properties.getProperty(LOCAL_HOST, "");
     }
 
+    /**
+     * Get Rest Port.<br>
+     * 
+     * @return Rest Port
+     * @since SDNO 0.5
+     */
+    public static int getRestPort() {
+        loadProperties();
+        return Integer.parseInt(properties.getProperty(REST_PORT, ""));
+    }
+
     private static void loadProperties() {
+        if(isLoadedSuccess) {
+            return;
+        }
         try {
             InputStream fin = RestProcessor.class.getClassLoader().getResourceAsStream(IP_CONFIG);
             properties.load(fin);
+            isLoadedSuccess = true;
         } catch(IOException e) {
             LOGGER.error("Load Property File failed!", e);
         }
