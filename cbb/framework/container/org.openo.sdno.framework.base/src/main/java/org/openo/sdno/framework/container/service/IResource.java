@@ -22,7 +22,7 @@ package org.openo.sdno.framework.container.service;
  * External abstract parent resource class, this class do not do any business logic, mostly used
  * only as an interface adapter and encapsulated in IService business for developing resource. Calls
  * are made to IService service interface from this class but there will be no direct business logic
- * in here.  
+ * in here.
  * </p>
  * 
  * @param policy

@@ -182,7 +182,7 @@ public class HTTPSender {
                 throw new ServiceException("restInvokeSNC auth failed! error code is :" + response.getStatus());
             }
         } catch(IOException | NoSuchProviderException | NoSuchAlgorithmException | ServiceException e) {
-            // Error info from SNC device might be null，'new
+            // Error info from SNC device might be null. 'new
             // InputStreamReader(conn.getErrorStream())'
             // will generate null point exception.
             if(response.getStatus() == 0) {
@@ -228,7 +228,7 @@ public class HTTPSender {
 
             processReturnMsg(msg, br);
         } catch(IOException | NoSuchProviderException | NoSuchAlgorithmException | ServiceException e) {
-            // Error info from SNC device might be null，'new
+            // Error info from SNC device might be null, 'new
             // InputStreamReader(conn.getErrorStream())'
             // will generate null point exception.
             msg.setBody("\"HttpSender::restInvoke error! \"");
@@ -324,7 +324,7 @@ public class HTTPSender {
     }
 
     /**
-     * Get token_id, SNC return sample： { "errcode": "sso.login.e0535", "errmsg": "", "data": {
+     * Get token_id, SNC return sample: { "errcode": "sso.login.e0535", "errmsg": "", "data": {
      * "expiredDate":"2015-12-20 04:19:57", "token_id":"" } }
      */
     protected void getTokenFromConn(HTTPReturnMessage response, HttpURLConnection conn) {
