@@ -20,7 +20,6 @@ import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.baseservice.roa.util.restclient.RestfulOptions;
 import org.openo.baseservice.roa.util.restclient.RestfulParametes;
 import org.openo.baseservice.roa.util.restclient.RestfulResponse;
-import org.openo.sdno.framework.container.util.IpConfig;
 
 /**
  * Restful processor class.<br>
@@ -43,10 +42,7 @@ public class RestProcessor implements IProcessor {
     @Override
     public RestfulResponse doAction(RestfulMethod action, String uri, RestfulParametes restParametes)
             throws ServiceException {
-        RestfulOptions restOptions = new RestfulOptions();
-        restOptions.setHost(IpConfig.getLocalHost());
-        restOptions.setPort(IpConfig.getRestPort());
-        return action.method(uri, restParametes, restOptions);
+        return action.method(uri, restParametes);
     }
 
     /**
@@ -63,8 +59,6 @@ public class RestProcessor implements IProcessor {
     @Override
     public RestfulResponse doAction(RestfulMethod action, String uri, RestfulParametes restParametes,
             RestfulOptions restOptions) throws ServiceException {
-        restOptions.setHost(IpConfig.getLocalHost());
-        restOptions.setPort(IpConfig.getRestPort());
         return action.method(uri, restParametes, restOptions);
     }
 
