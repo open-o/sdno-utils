@@ -23,7 +23,7 @@ import org.openo.baseservice.remoteservice.exception.ServiceException;
  * or null input parameters.<br>
  * 
  * @author
- * @version SDNO 0.5 13-Apr-2016
+ * @version SDNO 0.5 13-April-2016
  */
 public class InnerErrorServiceException extends ServiceException {
 

@@ -21,6 +21,12 @@ import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
+/**
+ * Task test class.<br/>
+ * 
+ * @author
+ * @version SDNO 0.5 2016-3-30
+ */
 public class TaskTest extends Task {
 
     @Test

@@ -43,7 +43,7 @@ public interface CliProtocol {
      * Execute Shell Script.<br>
      * 
      * @param scriptFile script file
-     * @param replaceParamMap replaced param map
+     * @param replaceParamMap replaced parameter map
      * @return command execution result
      * @throws ServiceException when execute shell script failed
      * @since SDNO 0.5

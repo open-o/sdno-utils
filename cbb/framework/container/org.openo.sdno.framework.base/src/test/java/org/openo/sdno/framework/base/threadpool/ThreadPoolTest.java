@@ -20,6 +20,12 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * ThreadPool test class.<br/>
+ * 
+ * @author
+ * @version SDNO 0.5 2016-3-30
+ */
 public class ThreadPoolTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ThreadPoolTest.class);

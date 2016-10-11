@@ -20,6 +20,12 @@ import javax.xml.soap.SOAPConnection;
 import javax.xml.soap.SOAPException;
 import javax.xml.soap.SOAPMessage;
 
+/**
+ * TestSoapConnectionClass class.<br>
+ * 
+ * @author
+ * @version SDNO 0.5 2016-4-18
+ */
 public class TestSoapConnectionClass extends SOAPConnection {
 
     public TestSoapConnectionClass() {

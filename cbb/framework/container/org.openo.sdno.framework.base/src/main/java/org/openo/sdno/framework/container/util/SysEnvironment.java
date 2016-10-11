@@ -89,7 +89,7 @@ public class SysEnvironment {
     /**
      * Get specific application path.<br>
      * 
-     * @param appName specific app name
+     * @param appName specific application name
      * @return path of the specific application
      * @since SDNO 0.5
      */
@@ -98,10 +98,10 @@ public class SysEnvironment {
     }
 
     /**
-     * Get specific application config directory.<br>
+     * Get specific application configuration directory.<br>
      * 
      * @param appName specific application name
-     * @return specific application config directory path
+     * @return specific application configuration directory path
      * @since SDNO 0.5
      */
     public static final String getConfPath(String appName) {
@@ -129,9 +129,9 @@ public class SysEnvironment {
     }
 
     /**
-     * Get the loopback IP address 127.0.0.1.<br>
+     * Get the loop-back IP address 127.0.0.1.<br>
      * 
-     * @return the loopback IP address 127.0.0.1
+     * @return the loop-back IP address 127.0.0.1
      * @since SDNO 0.5
      */
     public static final String getLocalHostIp() {

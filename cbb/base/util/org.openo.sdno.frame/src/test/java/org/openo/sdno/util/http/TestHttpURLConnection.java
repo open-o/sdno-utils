@@ -23,6 +23,12 @@ import java.net.URL;
 
 import org.apache.commons.io.IOUtils;
 
+/**
+ * TestHttpURLConnection class.<br>
+ * 
+ * @author
+ * @version SDNO 0.5 2016-4-27
+ */
 public class TestHttpURLConnection extends HttpURLConnection {
 
     protected TestHttpURLConnection(URL u) {

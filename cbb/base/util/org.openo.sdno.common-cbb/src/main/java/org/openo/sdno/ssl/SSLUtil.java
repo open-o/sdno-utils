@@ -59,11 +59,11 @@ public class SSLUtil {
     }
 
     /**
-     * Use password to analyze keystore file. <br>
+     * Use password to analyze key store file. <br>
      * 
-     * @param filePath file path to keystore file.
-     * @param key needed to parsing the keystore file.
-     * @return keystore object parsed from file.
+     * @param filePath file path to key store file.
+     * @param key needed to parsing the key store file.
+     * @return key store object parsed from file.
      * @since SDNO 0.5
      */
     private static KeyStore getKeyStore(String filePath, String keyPass) {
@@ -92,12 +92,12 @@ public class SSLUtil {
     }
 
     /**
-     * Initialize SSLContext with kerstore, TrustStore and protocol. <br>
+     * Initialize SSLContext with key store, TrustStore and protocol. <br>
      * 
-     * @param keyStoreKeyPass encrypted keystore keyword string.
-     * @param keyStoreFilePath file path to keystore file.
-     * @param trustStoreKeyPass encrypted truststore keyword string.
-     * @param trustStoreFilePath file path to truststore file.
+     * @param keyStoreKeyPass encrypted key store keyword string.
+     * @param keyStoreFilePath file path to key store file.
+     * @param trustStoreKeyPass encrypted trust store keyword string.
+     * @param trustStoreFilePath file path to trust store file.
      * @return SSLContext object created.
      * @since SDNO 0.5
      */

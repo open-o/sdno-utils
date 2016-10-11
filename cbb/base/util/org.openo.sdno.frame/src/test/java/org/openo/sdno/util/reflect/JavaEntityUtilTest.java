@@ -26,15 +26,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import mockit.Mock;
-import mockit.MockUp;
-
 import org.apache.poi.ss.formula.functions.T;
 import org.junit.Test;
 import org.openo.sdno.exception.InnerErrorServiceException;
-import org.openo.sdno.util.reflect.JavaEntityUtil;
-import org.openo.sdno.util.reflect.ReflectionUtil;
 
+import mockit.Mock;
+import mockit.MockUp;
+
+/**
+ * JavaEntityUtil test class.<br>
+ * 
+ * @author
+ * @version SDNO 0.5 2016-4-27
+ */
 public class JavaEntityUtilTest {
 
     private static final String FIELD_NAME1 = "name";

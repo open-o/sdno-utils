@@ -23,7 +23,7 @@ import org.openo.baseservice.util.impl.SystemEnvVariablesFactory;
 import org.openo.baseservice.util.inf.SystemEnvVariables;
 
 /**
- * System environment class, get app root path.<br/>
+ * System environment class, get application root path.<br/>
  * 
  * @author
  * @version SDNO 0.5 2016-6-12

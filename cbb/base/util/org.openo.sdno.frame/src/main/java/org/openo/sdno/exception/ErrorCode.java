@@ -17,10 +17,10 @@
 package org.openo.sdno.exception;
 
 /**
- * Class to accommodate all the required errorcode constants<br>
+ * Class to accommodate all the required error code constants<br>
  * 
  * @author
- * @version SDNO 0.5 13-Apr-2016
+ * @version SDNO 0.5 13-April-2016
  */
 public class ErrorCode {
 

@@ -20,6 +20,12 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+/**
+ * IRoaModule test class.<br/>
+ * 
+ * @author
+ * @version SDNO 0.5 2016-3-30
+ */
 public class IRoaModuleTest extends IRoaModule {
 
     @Test

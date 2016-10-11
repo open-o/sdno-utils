@@ -23,7 +23,7 @@ import org.openo.baseservice.roa.util.restclient.RestfulParametes;
 import org.openo.baseservice.roa.util.restclient.RestfulResponse;
 
 /**
- * rest method enumration class.<br/>
+ * rest method enumeration class.<br/>
  * 
  * @author
  * @version SDNO 0.5 2016-5-24

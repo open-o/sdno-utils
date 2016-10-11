@@ -26,6 +26,12 @@ import org.apache.commons.codec.DecoderException;
 import org.junit.Test;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 
+/**
+ * UuidUtils test class.<br/>
+ * 
+ * @author
+ * @version SDNO 0.5 2016-3-30
+ */
 public class UuidUtilsTest {
 
     @Test

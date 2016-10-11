@@ -23,7 +23,7 @@ import org.openo.baseservice.remoteservice.exception.ServiceException;
  * ROA exception information.<br>
  * 
  * @author
- * @version SDNO 0.5 23-Jul-2016
+ * @version SDNO 0.5 23-July-2016
  */
 public class RoaExceptionInfo {
 

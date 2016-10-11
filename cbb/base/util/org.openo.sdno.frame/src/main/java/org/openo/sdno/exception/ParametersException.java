@@ -20,7 +20,7 @@ package org.openo.sdno.exception;
  * Invalid parameter exception.<br>
  * 
  * @author
- * @version SDNO 0.5 13-Apr-2016
+ * @version SDNO 0.5 13-April-2016
  */
 @SuppressWarnings("serial")
 public class ParametersException extends RuntimeException {

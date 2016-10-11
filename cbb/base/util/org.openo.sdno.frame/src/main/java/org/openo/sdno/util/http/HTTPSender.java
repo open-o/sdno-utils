@@ -182,9 +182,9 @@ public class HTTPSender {
                 throw new ServiceException("restInvokeSNC auth failed! error code is :" + response.getStatus());
             }
         } catch(IOException | NoSuchProviderException | NoSuchAlgorithmException | ServiceException e) {
-            // Error info from SNC device might be null. 'new
+            // Error info from SNC device might be null,'new
             // InputStreamReader(conn.getErrorStream())'
-            // will generate null point exception.
+            // will generate null pointer exception.
             if(response.getStatus() == 0) {
                 response.setStatus(HttpStatus.SC_INTERNAL_SERVER_ERROR);
             }
@@ -228,9 +228,9 @@ public class HTTPSender {
 
             processReturnMsg(msg, br);
         } catch(IOException | NoSuchProviderException | NoSuchAlgorithmException | ServiceException e) {
-            // Error info from SNC device might be null, 'new
+            // Error info from SNC device might be null,'new
             // InputStreamReader(conn.getErrorStream())'
-            // will generate null point exception.
+            // will generate null pointer exception.
             msg.setBody("\"HttpSender::restInvoke error! \"");
             LOGGER.warn("HttpSender::restInvoke error! ", e);
         } finally {

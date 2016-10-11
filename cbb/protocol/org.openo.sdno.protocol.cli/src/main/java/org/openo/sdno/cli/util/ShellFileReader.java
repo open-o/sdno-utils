@@ -55,8 +55,8 @@ public class ShellFileReader {
     public static List<String> readShellCommandLines(String shellFile, Map<String, String> paramMap)
             throws ServiceException {
         if(StringUtils.isEmpty(shellFile)) {
-            LOGGER.error("shellFile param is wrong");
-            throw new ServiceException("shellFile param is wrong");
+            LOGGER.error("shellFile parameter is wrong");
+            throw new ServiceException("shellFile parameter is wrong");
         }
 
         List<String> cmdContentList = new ArrayList<String>();

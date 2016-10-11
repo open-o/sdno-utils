@@ -25,11 +25,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Roa released the module needs to be inherited, only the external publication Roa services, do not
+ * ROA released the module needs to be inherited, only the external publication Roa services, do not
  * allow Rest Service.<br/>
  * 
  * @author
- * @version SDNO 0.5 24-Mar-2016
+ * @version SDNO 0.5 24-March-2016
  */
 public abstract class IRoaModule extends IBaseModule {
 
@@ -45,7 +45,7 @@ public abstract class IRoaModule extends IBaseModule {
     private String webResourcePath = "";
 
     /**
-     * Roa list of resources by spring configuration IOC dependency injection.
+     * ROA list of resources by spring configuration IOC dependency injection.
      */
     private List<IResource<?>> roaResList = new ArrayList<IResource<?>>();
 
@@ -100,7 +100,7 @@ public abstract class IRoaModule extends IBaseModule {
     }
 
     /**
-     * To register Roa resources.<br/>
+     * To register ROA resources.<br/>
      * 
      * @since SDNO 0.5
      */
@@ -114,7 +114,7 @@ public abstract class IRoaModule extends IBaseModule {
     }
 
     /**
-     * To un-register Roa resources.<br/>
+     * To unregister ROA resources.<br/>
      * 
      * @since SDNO 0.5
      */

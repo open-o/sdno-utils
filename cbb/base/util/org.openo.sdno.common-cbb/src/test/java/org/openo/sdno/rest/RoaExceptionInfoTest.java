@@ -22,6 +22,12 @@ import org.junit.Test;
 import org.openo.baseservice.remoteservice.exception.ExceptionArgs;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 
+/**
+ * RoaExceptionInfoTest test class.<br>
+ * 
+ * @author
+ * @version SDNO 0.5 2016-4-21
+ */
 public class RoaExceptionInfoTest {
 
     @Test

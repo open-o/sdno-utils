@@ -23,7 +23,7 @@ import org.slf4j.LoggerFactory;
  * Task, a package of Runnable thread pool.<br/>
  * 
  * @author
- * @version SDNO 0.5 24-Mar-2016
+ * @version SDNO 0.5 24-March-2016
  */
 public abstract class Task implements Runnable {
 

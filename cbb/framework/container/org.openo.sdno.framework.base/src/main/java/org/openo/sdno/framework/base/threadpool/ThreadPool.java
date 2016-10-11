@@ -28,7 +28,7 @@ import org.slf4j.LoggerFactory;
  * The thread pool to achieve the functions of concurrent tasks.<br/>
  * 
  * @author
- * @version SDNO 0.5 24-Mar-2016
+ * @version SDNO 0.5 24-March-2016
  */
 public final class ThreadPool {
 

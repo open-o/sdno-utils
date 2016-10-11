@@ -28,7 +28,7 @@ import org.slf4j.LoggerFactory;
  * Class to get IP address from configuration file.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 31, 2016
+ * @version SDNO 0.5 August 31, 2016
  */
 public class IpConfig {
 

@@ -26,7 +26,7 @@ import org.openo.sdno.exception.ErrorCode;
  * 
  * @param <T> Data
  * @author
- * @version SDNO 0.5 13-Apr-2016
+ * @version SDNO 0.5 13-April-2016
  */
 public class InvRsp<T> {
 

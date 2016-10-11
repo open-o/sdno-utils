@@ -22,7 +22,7 @@ import org.openo.baseservice.roa.util.restclient.RestfulParametes;
 import org.openo.baseservice.roa.util.restclient.RestfulResponse;
 
 /**
- * Restful Proxy class.<br/>
+ * RestfulProxy class.<br/>
  * 
  * @author
  * @version SDNO 0.5 2016-3-26

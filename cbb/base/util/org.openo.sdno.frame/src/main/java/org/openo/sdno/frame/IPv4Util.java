@@ -23,7 +23,7 @@ import org.slf4j.LoggerFactory;
  * IPv4 address utility functions.<br>
  * 
  * @author
- * @version SDNO 0.5 13-Apr-2016
+ * @version SDNO 0.5 13-April-2016
  */
 public final class IPv4Util {
 
@@ -74,7 +74,7 @@ public final class IPv4Util {
      * Convert bytes to integer <br>
      * 
      * @param bytes - IP address in bytes
-     * @return int - IP address as integer
+     * @return integer - IP address as integer
      * @since SDNO 0.5
      */
     public static int bytesToInt(byte[] bytes) {
@@ -91,7 +91,7 @@ public final class IPv4Util {
      * Convert IP address to integer <br>
      * 
      * @param ipAddr - IP address as string
-     * @return int -IP address as integer
+     * @return integer -IP address as integer
      * @since SDNO 0.5
      */
     public static int ipToInt(String ipAddr) {
@@ -137,7 +137,7 @@ public final class IPv4Util {
      * Based on IP address and scope determine the netip and host scope <br>
      * 
      * @param ipAndMask - X.X.X.X/32
-     * @return array of int arrint[0] = netip, arrint[1] = host scope
+     * @return array of integer arrint[0] = netip, arrint[1] = host scope
      * @since SDNO 0.5
      */
     public static int[] getIPIntScope(String ipAndMask) {

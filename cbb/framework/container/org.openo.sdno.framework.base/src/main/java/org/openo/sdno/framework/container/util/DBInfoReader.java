@@ -58,10 +58,10 @@ public class DBInfoReader {
     }
 
     /**
-     * Read the Db information.<br/>
+     * Read the DB information.<br/>
      * 
-     * @param appName App name as string
-     * @return The Db information map
+     * @param appName Application name as string
+     * @return The DB information map
      * @since SDNO 0.5
      */
     public static Map<String, Map<String, Object>> readDbInfo(String appName) {

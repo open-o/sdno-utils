@@ -20,7 +20,7 @@ package org.openo.sdno.result;
  * Error Object containing error code and description and object information.<br>
  * 
  * @author
- * @version SDNO 0.5 13-Apr-2016
+ * @version SDNO 0.5 13-April-2016
  */
 public class ErrorCodeInfo {
 

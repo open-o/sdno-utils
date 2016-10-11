@@ -35,7 +35,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * SOAP message util class. Provide SOAP message sending function.<br>
+ * SOAPMessageUtil class. Provide SOAP message sending function.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-4-12

@@ -17,7 +17,7 @@
 package org.openo.sdno.cli.util;
 
 /**
- * Consts definition class of cli cbb.<br>
+ * Constants definition class of cli_cbb.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-08-18

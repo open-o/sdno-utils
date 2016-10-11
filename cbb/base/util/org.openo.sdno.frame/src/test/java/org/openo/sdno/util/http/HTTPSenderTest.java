@@ -27,16 +27,18 @@ import java.security.NoSuchProviderException;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.junit.Test;
+import org.openo.baseservice.remoteservice.exception.ServiceException;
+
 import mockit.Mock;
 import mockit.MockUp;
 
-import org.junit.Test;
-
-import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.util.http.HTTPRequestMessage;
-import org.openo.sdno.util.http.HTTPReturnMessage;
-import org.openo.sdno.util.http.HTTPSender;
-
+/**
+ * HTTPSender test class.<br>
+ * 
+ * @author
+ * @version SDNO 0.5 2016-4-27
+ */
 public class HTTPSenderTest {
 
     @Test

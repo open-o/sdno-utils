@@ -23,7 +23,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * JSON object parsing util class.<br>
+ * JSON object parsing NetMatrixJsonUtil class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-4-12
@@ -41,7 +41,8 @@ public final class NetMatrixJsonUtil {
      * 
      * @param fieldMap Data objects defined by map. If they are the basic data types, need to be<br>
      *            stored in the corresponding data objects, otherwise there will be exception of<br>
-     *            data type mismatch; if they are objects, then they need to be stored in a nested<br>
+     *            data type mismatch; if they are objects, then they need to be stored in a
+     *            nested<br>
      *            Map.<br>
      * @param objType Object type
      * @return Objects which is parsed out

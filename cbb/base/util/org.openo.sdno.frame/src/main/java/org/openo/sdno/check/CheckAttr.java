@@ -25,7 +25,7 @@ import java.lang.annotation.Target;
  * Data validation for the attributes<br>
  * 
  * @author
- * @version SDNO 0.5 13-Apr-2016
+ * @version SDNO 0.5 13-April-2016
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)

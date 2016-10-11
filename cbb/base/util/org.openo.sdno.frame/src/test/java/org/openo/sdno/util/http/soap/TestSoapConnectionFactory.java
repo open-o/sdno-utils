@@ -20,6 +20,12 @@ import javax.xml.soap.SOAPConnection;
 import javax.xml.soap.SOAPConnectionFactory;
 import javax.xml.soap.SOAPException;
 
+/**
+ * TestSoapConnectionFactory class.<br>
+ * 
+ * @author
+ * @version SDNO 0.5 2016-4-18
+ */
 public class TestSoapConnectionFactory extends SOAPConnectionFactory {
 
     public TestSoapConnectionFactory() {

@@ -21,6 +21,12 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+/**
+ * InvRsp test class.<br>
+ * 
+ * @author
+ * @version SDNO 0.5 2016-4-27
+ */
 public class InvRspTest {
 
     @Test

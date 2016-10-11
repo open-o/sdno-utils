@@ -16,6 +16,12 @@
 
 package org.openo.sdno.resource;
 
+/**
+ * ResourceUtilTest test class.<br>
+ * 
+ * @author
+ * @version SDNO 0.5 2016-4-21
+ */
 import static org.junit.Assert.assertEquals;
 
 import java.io.File;

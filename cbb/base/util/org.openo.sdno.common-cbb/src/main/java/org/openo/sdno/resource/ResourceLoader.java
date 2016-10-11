@@ -26,7 +26,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Astract class of properties load. <br>
+ * Abstract class of properties load. <br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-16
@@ -42,9 +42,9 @@ public abstract class ResourceLoader {
     }
 
     /**
-     * Set loder calss for properties file load. <br>
+     * Set loader class for properties file load. <br>
      * 
-     * @param clazzImpl Loder class.
+     * @param clazzImpl Loader class.
      * @since SDNO 0.5
      */
     public static void setLoaderClass(Class<?> clazzImpl) {

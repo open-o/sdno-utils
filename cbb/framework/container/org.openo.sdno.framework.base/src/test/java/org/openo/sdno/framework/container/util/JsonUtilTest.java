@@ -35,6 +35,12 @@ import org.junit.Test;
 import mockit.Mock;
 import mockit.MockUp;
 
+/**
+ * JsonUtil test class.<br/>
+ * 
+ * @author
+ * @version SDNO 0.5 2016-3-30
+ */
 public class JsonUtilTest {
 
     static Map<String, String> strMap = new HashMap<String, String>();
