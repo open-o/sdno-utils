@@ -118,7 +118,7 @@ public class MsbManage {
         restParametes.putHttpContextHeader("Content-Type", "application/json;charset=UTF-8");
         restParametes.setRawData(JsonUtil.toJson(msbRegistionBodyMap));
 
-        LOGGER.error("Registering body: " + JsonUtil.toJson(msbRegistionBodyMap));
+        LOGGER.info("Registering body: " + JsonUtil.toJson(msbRegistionBodyMap));
 
         RegisterThread registerThread = new RegisterThread(restParametes);
         Executors.newSingleThreadExecutor().submit(registerThread);
