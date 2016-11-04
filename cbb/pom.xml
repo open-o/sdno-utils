@@ -23,7 +23,7 @@
     <parent>
         <artifactId>org.openo.sdno.root</artifactId>
         <groupId>org.openo.sdno.utils</groupId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
     <properties>
         <ver.oms>2.0.0.RELEASE</ver.oms>
