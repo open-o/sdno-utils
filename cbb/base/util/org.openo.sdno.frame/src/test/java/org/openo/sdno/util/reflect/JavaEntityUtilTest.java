@@ -81,11 +81,9 @@ public class JavaEntityUtilTest {
     public void testGetFiledValues() throws InnerErrorServiceException {
         Name obj = new Name();
         Map<String, Object> testMap = JavaEntityUtil.getFiledValues(obj);
-        Map<String, Object> testMap1 = new HashMap<String, Object>();
-        testMap1.put(FIELD_NAME3, obj.getLastname());
-        testMap1.put(FIELD_NAME2, obj.getNewname());
-        testMap1.put(FIELD_NAME1, obj.getName());
-        assertEquals(testMap, testMap1);
+        assertEquals(testMap.get(FIELD_NAME1), obj.getName());
+        assertEquals(testMap.get(FIELD_NAME2), obj.getNewname());
+        assertEquals(testMap.get(FIELD_NAME3), obj.getLastname());        
     }
 
     @Test
