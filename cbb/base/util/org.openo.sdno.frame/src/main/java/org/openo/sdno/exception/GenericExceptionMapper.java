@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Huawei Technologies Co., Ltd.
+ * Copyright 2016-2017 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,8 +32,7 @@ public class GenericExceptionMapper implements ExceptionMapper<Exception> {
 
     @Override
     public Response toResponse(Exception exception) {
-        return Response.status(HttpCode.ERR_FAILED).type(MediaType.APPLICATION_JSON).entity(exception.getMessage())
-                .build();
+        return Response.status(HttpCode.ERR_FAILED).type(MediaType.APPLICATION_JSON).entity(exception).build();
     }
 
 }
