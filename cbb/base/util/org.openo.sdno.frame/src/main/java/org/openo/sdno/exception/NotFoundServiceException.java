@@ -16,14 +16,27 @@
 
 package org.openo.sdno.exception;
 
+import org.openo.baseservice.remoteservice.exception.ServiceException;
+
 /**
- * Invalid parameter exception.<br>
+ * Resource not found exception.<br>
  * 
  * @author
  * @version SDNO 0.5 13-April-2016
  */
 @SuppressWarnings("serial")
-public class ParametersException extends RuntimeException {
+public class NotFoundServiceException extends ServiceException {
+
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * Constructor.<br>
+     * 
+     * @since SDNO 0.5
+     */
+    public NotFoundServiceException() {
+        super(String.valueOf(ErrorCode.INNER_ERROR), HttpCode.NOT_FOUND);
+    }
 
     /**
      * Constructor.<br>
@@ -31,7 +44,19 @@ public class ParametersException extends RuntimeException {
      * @since SDNO 0.5
      * @param msg Exception arguments message
      */
-    public ParametersException(String msg) {
-        super(msg);
+    public NotFoundServiceException(String msg) {
+        super(String.valueOf(ErrorCode.INNER_ERROR), msg);
+        super.setHttpCode(HttpCode.NOT_FOUND);
+    }
+
+    /**
+     * Constructor.<br>
+     * 
+     * @since SDNO 0.5
+     * @param ex Throwable object
+     */
+    public NotFoundServiceException(Throwable ex) {
+        super(String.valueOf(ErrorCode.INNER_ERROR), ex);
+        super.setHttpCode(HttpCode.NOT_FOUND);
     }
 }

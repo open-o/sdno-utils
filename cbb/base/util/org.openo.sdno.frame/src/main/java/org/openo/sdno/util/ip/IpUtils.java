@@ -22,7 +22,6 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
-import org.openo.sdno.exception.ParametersException;
 import org.openo.sdno.framework.container.util.IpConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -122,7 +121,7 @@ public class IpUtils {
         Matcher matcher = pattern.matcher(cidr);
         if(!matcher.matches()) {
             LOGGER.error("The cidr's format error.");
-            throw new ParametersException("The cidr's format error.");
+            return null;
         }
         String[] splited = cidr.split("/");
         return splited[0];

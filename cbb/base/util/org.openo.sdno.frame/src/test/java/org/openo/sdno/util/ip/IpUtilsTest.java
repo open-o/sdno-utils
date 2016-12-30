@@ -17,9 +17,8 @@
 package org.openo.sdno.util.ip;
 
 import static org.junit.Assert.assertEquals;
-import org.junit.Test;
 
-import org.openo.sdno.exception.ParametersException;
+import org.junit.Test;
 
 /**
  * IpUtils test class.<br>
@@ -115,10 +114,9 @@ public class IpUtilsTest {
         assertEquals("192.168.150.111", IpUtils.getIPFromCIDR(cidr3));
     }
 
-    @Test(expected = ParametersException.class)
     public void test_getIPFromCIDRNegtive() {
         String cidr3 = "192.168.150.111/aa";
-        IpUtils.getIPFromCIDR(cidr3);
+        assertEquals(null, IpUtils.getIPFromCIDR(cidr3));
     }
 
 }
