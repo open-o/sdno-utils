@@ -17,11 +17,19 @@ package org.openo.sdno.healthcheck.service;
 
 import java.util.Map;
 
+/**
+ * 
+ * Default Health Checker Class.<br/>
+ * <p>
+ * </p>
+ * 
+ * @author
+ * @version     SDNO 0.5  Feb 8, 2017
+ */
 public class DefaultHealthChecker extends HealthChecker{
 
-	@Override
-	public void checkDBConnection(Map<String, String> statusMap) {
-		//DB check will be implemented in drivers that require DB
-	}
-
+    @Override
+    public void checkDbConnection(Map<String, String> statusMap) {
+        //DB check will be implemented in drivers that require DB
+    }
 }

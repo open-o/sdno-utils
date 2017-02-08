@@ -26,24 +26,39 @@ import org.openo.sdno.healthcheck.service.HealthChecker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * 
+ * Driver Health Check ROA Class.<br/>
+ * <p>
+ * </p>
+ * 
+ * @author
+ * @version     SDNO 0.5  Feb 8, 2017
+ */
 @Service
 @Path("/healthcheck")
 public class HealthCheckRoaResource {
-	
-	@Autowired
-	private HealthChecker checker;
-	
-	@GET
-	@Produces({"application/json"})
-	public Map<String, String> getstatus() {
-		
-		Map<String, String> StatusMap = new HashMap<String, String>();
-		
-		checker.checkDBConnection(StatusMap);
-				
-		checker.checkMSBConnection(StatusMap);
-		
-		return StatusMap;
-	}
-
+    
+    @Autowired
+    private HealthChecker checker;
+    
+    /**
+     * 
+     * Get the driver status.<br/>
+     * 
+     * @return
+     * @since  SDNO 0.5
+     */
+    @GET
+    @Produces({"application/json"})
+    public Map<String, String> getstatus() {
+        
+        Map<String, String> statusMap = new HashMap<>();
+        
+        checker.checkDbConnection(statusMap);
+                
+        checker.checkMsbConnection(statusMap);
+        
+        return statusMap;
+    }
 }
