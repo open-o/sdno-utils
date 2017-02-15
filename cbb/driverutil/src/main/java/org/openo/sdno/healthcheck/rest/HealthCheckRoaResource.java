@@ -36,7 +36,7 @@ import org.springframework.stereotype.Service;
  * @version     SDNO 0.5  Feb 8, 2017
  */
 @Service
-@Path("/healthcheck")
+@Path("/{driver}/healthcheck")
 public class HealthCheckRoaResource {
     
     @Autowired
