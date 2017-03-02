@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Huawei Technologies Co., Ltd.
+ * Copyright 2016-2017 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,6 +22,9 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
+import org.apache.commons.net.util.SubnetUtils;
+import org.apache.commons.net.util.SubnetUtils.SubnetInfo;
+import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.framework.container.util.IpConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,9 +38,6 @@ import org.slf4j.LoggerFactory;
 public class IpUtils {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(IpUtils.class);
-
-    private static final String REGEX =
-            "([1-9]|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])(\\.(\\d|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])){3}/\\d{1,2}";
 
     private IpUtils() {
 
@@ -113,18 +113,51 @@ public class IpUtils {
      * @since SDNO 0.5
      */
     public static String getIPFromCIDR(String cidr) {
-        if((null == cidr) || "".equals(cidr)) {
+        if(StringUtils.isEmpty(cidr)) {
             LOGGER.error("getIPFromCIDR cidr is empty.");
-            return "";
-        }
-        Pattern pattern = Pattern.compile(REGEX);
-        Matcher matcher = pattern.matcher(cidr);
-        if(!matcher.matches()) {
-            LOGGER.error("The cidr's format error.");
             return null;
         }
-        String[] splited = cidr.split("/");
-        return splited[0];
+
+        SubnetUtils subnetUtils = new SubnetUtils(cidr);
+        SubnetInfo subnetInfo = subnetUtils.getInfo();
+        return subnetInfo.getAddress();
+    }
+
+    /**
+     * Get Net mask address from CIDR.<br>
+     * 
+     * @param cidr Format address, such as 10.10.10.0/24
+     * @return Net mask
+     * @since SDNO 0.5
+     */
+    public static String getNetMaskFromCIDR(String cidr) {
+        if(StringUtils.isEmpty(cidr)) {
+            LOGGER.error("getNetMaskFromCIDR cidr is empty.");
+            return null;
+        }
+
+        SubnetUtils subnetUtils = new SubnetUtils(cidr);
+        SubnetInfo subnetInfo = subnetUtils.getInfo();
+        return subnetInfo.getNetmask();
+    }
+
+    /**
+     * Get Minimum IpAddress from cidr.<br>
+     * 
+     * @param cidr cidr Format address, such as 10.10.10.0/24
+     * @return Minimum IpAddress
+     * @throws ServiceException when execution failed
+     * @since SDNO 0.5
+     */
+    public static String getMinIpFromCIDR(String cidr) {
+        if(StringUtils.isEmpty(cidr)) {
+            LOGGER.error("getIPFromCIDR cidr is empty.");
+            return null;
+        }
+
+        SubnetUtils subnetUtils = new SubnetUtils(cidr);
+        SubnetInfo subnetInfo = subnetUtils.getInfo();
+        return subnetInfo.getLowAddress();
     }
 
     /**

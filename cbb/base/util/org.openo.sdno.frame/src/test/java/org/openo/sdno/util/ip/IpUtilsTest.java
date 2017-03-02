@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Huawei Technologies Co., Ltd.
+ * Copyright 2016-2017 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,8 +17,10 @@
 package org.openo.sdno.util.ip;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+import org.openo.baseservice.remoteservice.exception.ServiceException;
 
 /**
  * IpUtils test class.<br>
@@ -109,14 +111,26 @@ public class IpUtilsTest {
         String cidr1 = null;
         String cidr2 = "";
         String cidr3 = "192.168.150.111/24";
-        assertEquals("", IpUtils.getIPFromCIDR(cidr1));
-        assertEquals("", IpUtils.getIPFromCIDR(cidr2));
+        assertEquals(null, IpUtils.getIPFromCIDR(cidr1));
+        assertEquals(null, IpUtils.getIPFromCIDR(cidr2));
         assertEquals("192.168.150.111", IpUtils.getIPFromCIDR(cidr3));
     }
 
+    @Test(expected = IllegalArgumentException.class)
     public void test_getIPFromCIDRNegtive() {
         String cidr3 = "192.168.150.111/aa";
         assertEquals(null, IpUtils.getIPFromCIDR(cidr3));
     }
 
+    @Test
+    public void test_getNetMaskFromCIDR() throws ServiceException {
+        String cidr = "10.100.100.0/24";
+        assertTrue("255.255.255.0".equals(IpUtils.getNetMaskFromCIDR(cidr)));
+    }
+
+    @Test
+    public void test_getMinIpFromCIDR() throws ServiceException {
+        String cidr = "10.100.100.0/24";
+        assertTrue("10.100.100.1".equals(IpUtils.getMinIpFromCIDR(cidr)));
+    }
 }
